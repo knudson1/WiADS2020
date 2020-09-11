@@ -16,6 +16,7 @@ vignette: >
 
 ```{r, include = FALSE}
 knitr::opts_chunk$set(
+  echo = TRUE,
   collapse = TRUE,
   comment = "#>"
 )
@@ -35,11 +36,5 @@ library(MyFirstPackage)
 
 ```{r cars, echo = TRUE}
 summary(cars)
-```
-
-## Building an R package
-
-```{r pressure}
-plot(pressure)
 ```
 
