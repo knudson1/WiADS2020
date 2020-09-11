@@ -1,0 +1,45 @@
+---
+title: "Software Design, Development, and Distribution in R"
+author: "Lindsey Dietz, PhD and Christina Knudson, PhD"
+date: "10/30/2020"
+output: 
+  beamer_presentation:
+    theme: "default"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+    highlight: haddock
+vignette: >
+  %\VignetteIndexEntry{Presentation_Slides}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(MyFirstPackage)
+```
+
+## Objectives of this talk
+
+- Best practices for package design
+- Building an R package
+- Distribution of your package
+
+## Slide with R Output
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Building an R package
+
+```{r pressure}
+plot(pressure)
+```
+
