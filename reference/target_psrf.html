@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Minimum Effective Sample Size — minESS • MyFirstPackage</title>
+<title>Target potential scale reduction factor (PSRF) — target_psrf • MyFirstPackage</title>
 
 
 <!-- jquery -->
@@ -39,9 +39,9 @@
 
 
 
-<meta property="og:title" content="Minimum Effective Sample Size — minESS" />
-<meta property="og:description" content="This function calculates minimum effective sample size for a MCMC sample.
-This is adapted from the more complex version in stableGR:::minESS." />
+<meta property="og:title" content="Target potential scale reduction factor (PSRF) — target_psrf" />
+<meta property="og:description" content="This function calculates the target PSRF for a set of MCMC chains.
+This is adapted from the more complex version in stableGR" />
 
 
 
@@ -116,21 +116,25 @@ This is adapted from the more complex version in stableGR:::minESS." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Minimum Effective Sample Size</h1>
+    <h1>Target potential scale reduction factor (PSRF)</h1>
     
-    <div class="hidden name"><code>minESS.Rd</code></div>
+    <div class="hidden name"><code>target_psrf.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This function calculates minimum effective sample size for a MCMC sample.
-This is adapted from the more complex version in stableGR:::minESS.</p>
+    <p>This function calculates the target PSRF for a set of MCMC chains.
+This is adapted from the more complex version in stableGR</p>
     </div>
 
-    <pre class="usage"><span class='fu'>minESS</span><span class='op'>(</span><span class='va'>p</span>, alpha <span class='op'>=</span> <span class='fl'>0.05</span>, epsilon <span class='op'>=</span> <span class='fl'>0.05</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>target_psrf</span><span class='op'>(</span><span class='va'>m</span>, <span class='va'>p</span>, alpha <span class='op'>=</span> <span class='fl'>0.05</span>, epsilon <span class='op'>=</span> <span class='fl'>0.05</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>m</th>
+      <td><p>Number of MCMC chains, e.g. 3 chains implies m = 3</p></td>
+    </tr>
     <tr>
       <th>p</th>
       <td><p>Number of parameters being sampled, e.g. (beta1, beta2, beta3) implies p = 3</p></td>
@@ -141,22 +145,30 @@ This is adapted from the more complex version in stableGR:::minESS.</p>
     </tr>
     <tr>
       <th>epsilon</th>
-      <td><p>Relative precision term; fixing all other elements, as precision is set smaller, sample size increases; defaults to 0.05</p></td>
+      <td><p>Relative precision term; fixing all other elements,
+as precision is set smaller, sample size increases; defaults to 0.05</p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p>D. Vats, J. Flegal, &amp; G. Jones 2019. Multivariate output analysis for Markov chain Monte Carlo.
-Biometrika, Volume 106, Issue 2, June 2019,
-Pages 321–337, https://doi.org/10.1093/biomet/asz002</p>
-<p>D. Vats and C. Knudson.
-Revisiting the Gelman-Rubin Diagnostic. https://arxiv.org/abs/1812.09384</p>
+    <p>D. Vats and C. Knudson. Revisiting the Gelman-Rubin Diagnostic.
+https://arxiv.org/abs/1812.09384</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>minESS</span><span class='op'>(</span>p <span class='op'>=</span> <span class='fl'>2</span>, alpha <span class='op'>=</span> <span class='fl'>0.05</span>, epsilon <span class='op'>=</span> <span class='fl'>0.05</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 7529</div><div class='input'><span class='fu'>minESS</span><span class='op'>(</span>p <span class='op'>=</span> <span class='fl'>2</span>, alpha <span class='op'>=</span> <span class='fl'>0.10</span>, epsilon <span class='op'>=</span> <span class='fl'>0.05</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; [1] 5787</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>target_psrf</span><span class='op'>(</span>m <span class='op'>=</span> <span class='fl'>2</span>, p <span class='op'>=</span> <span class='fl'>2</span>, alpha <span class='op'>=</span> <span class='fl'>0.05</span>, epsilon <span class='op'>=</span> <span class='fl'>0.05</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $psrf
+#&gt; [1] 1.000133
+#&gt; 
+#&gt; $epsilon
+#&gt; [1] 0.05
+#&gt; </div><div class='input'><span class='fu'>target_psrf</span><span class='op'>(</span>m <span class='op'>=</span> <span class='fl'>5</span>, p <span class='op'>=</span> <span class='fl'>2</span>, alpha <span class='op'>=</span> <span class='fl'>0.10</span>, epsilon <span class='op'>=</span> <span class='fl'>0.05</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $psrf
+#&gt; [1] 1.000432
+#&gt; 
+#&gt; $epsilon
+#&gt; [1] 0.05
+#&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
