@@ -71,7 +71,49 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-A starter package to accompany the 2020-10-30 talk by L. Dietz and C. Knudson.
+<div id="myfirstpackage" class="section level1">
+<div class="page-header"><h1 class="hasAnchor">
+<a href="#myfirstpackage" class="anchor"></a>MyFirstPackage</h1></div>
+<!-- badges: start -->
+<!-- badges: end -->
+<p>The goal of MyFirstPackage is to accompany the talk by Dietz &amp; Knudson at the Minneanalytics Women in Analytics and Data Science conference held on October 30, 2020.</p>
+<div id="installation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#installation" class="anchor"></a>Installation</h2>
+<p>You can install the development version of MyFirstPackage from <a href="https://github.com/">GitHub</a> with:</p>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="co"># install.packages("devtools")</span>
+<span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"knudson1/WiADS2020"</span><span class="op">)</span></pre></div>
+</div>
+<div id="talk-slides" class="section level2">
+<h2 class="hasAnchor">
+<a href="#talk-slides" class="anchor"></a>Talk Slides</h2>
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">MyFirstPackage</span><span class="op">)</span>
+
+<span class="fu"><a href="https://rdrr.io/r/utils/vignette.html">vignette</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">'MyFirstPackage'</span><span class="op">)</span>
+<span class="co">#&gt; no vignettes found</span></pre></div>
+</div>
+<div id="example" class="section level2">
+<h2 class="hasAnchor">
+<a href="#example" class="anchor"></a>Example</h2>
+<p>This is an example of the two functions included in this package:</p>
+<div class="sourceCode" id="cb3"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">MyFirstPackage</span><span class="op">)</span>
+
+<span class="co">#Calculate effective sample size</span>
+<span class="fu"><a href="reference/minESS.html">minESS</a></span><span class="op">(</span>p <span class="op">=</span> <span class="fl">2</span>, alpha <span class="op">=</span> <span class="fl">0.05</span>, epsilon <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span>
+<span class="co">#&gt; [1] 7529</span>
+
+<span class="co">#Calculate target PSRF using 5 chains</span>
+<span class="fu"><a href="reference/target.psrf.html">target.psrf</a></span><span class="op">(</span>m <span class="op">=</span> <span class="fl">5</span>, p <span class="op">=</span> <span class="fl">2</span>, alpha <span class="op">=</span> <span class="fl">0.05</span>, epsilon <span class="op">=</span> <span class="fl">0.05</span><span class="op">)</span>
+<span class="co">#&gt; $psrf</span>
+<span class="co">#&gt; [1] 1.000332</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; $epsilon</span>
+<span class="co">#&gt; [1] 0.05</span></pre></div>
+</div>
+</div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -99,7 +141,7 @@ A starter package to accompany the 2020-10-30 talk by L. Dietz and C. Knudson.
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
