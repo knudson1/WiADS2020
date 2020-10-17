@@ -1,0 +1,87 @@
+---
+title: "Software Design, Development, and Distribution in R"
+author: "Lindsey Dietz, PhD and Christina Knudson, PhD"
+date: "10/30/2020"
+output: 
+  beamer_presentation:
+    theme: "default"
+    colortheme: "dolphin"
+    fonttheme: "structurebold"
+    highlight: haddock
+vignette: >
+  %\VignetteIndexEntry{Presentation_Slides}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup, message=FALSE}
+library(MyFirstPackage)
+library(usethis)
+library(testthat)
+library(dplyr)
+library(here)
+library(devtools)
+library(roxygen2)
+```
+
+## Objectives of this talk
+
+- Best practices for package design
+- Building an R package
+- Distribution of your package
+
+## Best practices for package design
+
+30-35 minutes worth of content
+
+ Implementing sound design principles
+-baby package
+-real one - real design doc to 
+
+## Building an R package 
+
+
+## Why Distribute Your Package?
+
+From David Robinson's excellent talk at rstudio::conf(2019)
+
+```{r dr, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/dr.jpeg")
+```
+
+## Why Distribute Your Package?
+
+- Gains in usership/citations for those in the public domain (academics, nonprofits)
+- Gains in productivity for those in private industries
+- Saving future you time
+
+## Using Version Control
+
+```{r organized, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/ann.jpeg")
+```
+
+- This is not a Git talk, but Git has become a dominant version control technique so we are demo-ing our work on Github
+- An amazing and free resource for R users is Jenny Brian's book: https://happygitwithr.com/
+
+How this is useful to audit
+Production version control - put R in prod
+Focus more on why to use - maybe RStudio easy integration with github
+
+How this is useful to audit/third parties
+Easy to track changes over time
+Issue driven development (working with teams) https://github.com/tidyverse/dplyr/issues
+Production version control - put R in prod reference to talk
+
+LD will start creating baby package using the usethis and testthat package
+-function and 2 derivatives
+-finite differences test to check derivatives - check for less than some kind of tolerance
+
