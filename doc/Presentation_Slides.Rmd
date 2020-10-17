@@ -30,6 +30,17 @@ knitr::opts_chunk$set(
 ## Dr. Dietz's Disclaimer
 The views expressed in this presentation are strictly my own. They do not necessarily represent the position of the Federal Reserve Bank of Minneapolis or the Federal Reserve System.
 
+## About Us
+
+ - Met in our Statistics PhD program in 2011
+ - Co-organizers of R Ladies-Twin Cities and the noRth conference
+ - Cyclists & coffee lovers
+ 
+```{r ldck, echo=FALSE, out.width = '50%'}
+knitr::include_graphics("pics/ldck.jpg")
+```
+
+
 ## Objectives of this talk
 
 ```{r setup, message=FALSE, eval=FALSE}
@@ -98,8 +109,8 @@ library(roxygen2)
 library(usethis)
 
 usethis::create_package("~/MyFirstPackage")
-usethis::use_testthat()
-usethis::use_git()
+# usethis::use_testthat() #if you want to add tests
+usethis::use_git() #if you want to use Git
 
 ```
 
@@ -123,12 +134,34 @@ knitr::include_graphics("pics/partialfunc.jpeg")
 knitr::include_graphics("pics/fullfunc.jpeg")
 ```
 
-## Build your package
+## Add documentation for functions - Roxygen
 
-```{r miness2, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("pics/fullfunc.jpeg")
+```{r doc, echo=FALSE, out.width = '75%'}
+knitr::include_graphics("pics/doc.jpg")
 ```
 
+## Check, build, and install your package
+
+```{r check, eval = FALSE, echo=TRUE}
+devtools::check()
+devtools::build()
+devtools::install()
+```
+
+Or use the build tools in Rstudio
+```{r build, echo=FALSE, out.width = '80%'}
+knitr::include_graphics("pics/buildtools.jpg")
+```
+
+## Customize!
+
+- Add tests
+- Add other package dependencies
+- Add vignettes
+
+```{r bedazzle, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/bedazzler.jpg")
+```
 
 ## Distribution of Your R Package
 
@@ -170,7 +203,16 @@ Easy to track changes over time
 Issue driven development (working with teams) https://github.com/tidyverse/dplyr/issues
 Production version control - put R in prod reference to talk
 
-LD will start creating baby package using the usethis and testthat package
--function and 2 derivatives
--finite differences test to check derivatives - check for less than some kind of tolerance
+## Where to Find Us
 
+*Lindsey Dietz*
+
+ - Email: lindseydietz13@gmail.com
+ - LinkedIn: https://www.linkedin.com/in/lindseydietz/
+ - Twitter: https://twitter.com/lindseydietz13
+
+*Christina Knudson*
+
+ - Email: knud8583@stthomas.edu
+ - LinkedIn: https://www.linkedin.com/in/christinaknudson/
+ - Twitter: https://twitter.com/canoodleson
