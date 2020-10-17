@@ -1,11 +1,16 @@
 ---
 title: "Software Design, Development, and Distribution in R"
-author: "Lindsey Dietz, PhD and Christina Knudson, PhD"
-date: "10/30/2020"
+author: 
+   - Lindsey Dietz, PhD$^1$
+   - Christina Knudson, PhD$^2$
+institute: 
+   - $^1$Financial Economist, Federal Reserve Bank of Minneapolis
+   - $^2$Asst. Professor of Statistics, University of Saint Thomas
+date: "2020-10-30"
 output: 
   beamer_presentation:
     theme: "default"
-    colortheme: "dolphin"
+    colortheme: "whale"
     fonttheme: "structurebold"
     highlight: haddock
 vignette: >
@@ -22,34 +27,74 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup, message=FALSE}
+## Dr. Dietz's Disclaimer
+The views expressed in this presentation are strictly my own. They do not necessarily represent the position of the Federal Reserve Bank of Minneapolis or the Federal Reserve System.
+
+## Objectives of this talk
+
+```{r setup, message=FALSE, eval=FALSE}
 library(MyFirstPackage)
-library(usethis)
-library(testthat)
+
+# Best practices for R package design
+design_package()
+
+# Building an R package
+build_package()
+
+# Distribution of your R package
+distribute_package()
+
+```
+
+```{r setup2, echo=FALSE, message=FALSE}
 library(dplyr)
 library(here)
+```
+
+## Best practices for R package design
+
+```{r pam, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/pam.jpeg")
+```
+
+## What is a design document
+
+## Why use a design document
+ - splits the work into two steps (thinking and coding)
+ - makes you explain everything in detail (so you can know if you understand the details)
+ - helps you predict problems/tricky points
+ - helps you divide the work into reasonable modules so you can split it between days or people and make sure it it will come together seamlessly
+ - Helps future you/developers understand what you had done so that you can create improvements or additions
+
+## What to include in your design document
+ - goal of each function
+ - inputs and outputs of each
+ - flow chart between functions
+ - calculations/equations
+ - any tricky points
+ - numerical stability considerations 
+ - how you will approach each function, including pseudo code if it’s nontrivial
+ - tests you will implement (again goals, details)
+ - Helpful sketches
+ - Major updates
+ - Things you want to add/change in the future
+
+## Building an R package 
+
+```{r lego1, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/lego.jpeg")
+```
+
+## R can help you  
+
+```{r setup3, message=FALSE}
+library(usethis)
+library(testthat)
 library(devtools)
 library(roxygen2)
 ```
 
-## Objectives of this talk
-
-- Best practices for package design
-- Building an R package
-- Distribution of your package
-
-## Best practices for package design
-
-30-35 minutes worth of content
-
- Implementing sound design principles
--baby package
--real one - real design doc to 
-
-## Building an R package 
-
-
-## Why Distribute Your Package?
+## Why Distribute Your R Package?
 
 From David Robinson's excellent talk at rstudio::conf(2019)
 
@@ -57,7 +102,7 @@ From David Robinson's excellent talk at rstudio::conf(2019)
 knitr::include_graphics("pics/dr.jpeg")
 ```
 
-## Why Distribute Your Package?
+## Why Distribute Your R Package?
 
 - Gains in usership/citations for those in the public domain (academics, nonprofits)
 - Gains in productivity for those in private industries
@@ -66,8 +111,10 @@ knitr::include_graphics("pics/dr.jpeg")
 ## Using Version Control
 
 ```{r organized, echo=FALSE, out.width = '100%'}
-knitr::include_graphics("pics/ann.jpeg")
+knitr::include_graphics("pics/ann.jpg")
 ```
+
+## Using Version Control
 
 - This is not a Git talk, but Git has become a dominant version control technique so we are demo-ing our work on Github
 - An amazing and free resource for R users is Jenny Brian's book: https://happygitwithr.com/
