@@ -1,11 +1,16 @@
 ---
 title: "Software Design, Development, and Distribution in R"
-author: "Lindsey Dietz, PhD and Christina Knudson, PhD"
-date: "10/30/2020"
+author: 
+   - Lindsey Dietz, PhD$^1$
+   - Christina Knudson, PhD$^2$
+institute: 
+   - $^1$Financial Economist, Federal Reserve Bank of Minneapolis
+   - $^2$Asst. Professor of Statistics, University of Saint Thomas
+date: "2020-10-30"
 output: 
   beamer_presentation:
     theme: "default"
-    colortheme: "dolphin"
+    colortheme: "whale"
     fonttheme: "structurebold"
     highlight: haddock
 vignette: >
@@ -22,19 +27,193 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r setup}
-library(MyFirstPackage)
+## Dr. Dietz's Disclaimer
+The views expressed in this presentation are strictly my own. They do not necessarily represent the position of the Federal Reserve Bank of Minneapolis or the Federal Reserve System.
+
+## About Us
+
+ - Friends since meeting in our Statistics PhD program in 2011
+ - Co-organizers of R Ladies-Twin Cities and the noRth conference
+ - Both cyclists & coffee lovers
+ 
+```{r ldck, echo=FALSE, out.width = '50%'}
+knitr::include_graphics("pics/ldck.jpg")
 ```
 
 ## Objectives of this talk
 
-- Best practices for package design
-- Building an R package
-- Distribution of your package
+```{r setup, message=FALSE, eval=FALSE}
+library(MyFirstPackage)
 
-## Slide with R Output
+# Best practices for R package design
+design_package()
 
-```{r cars, echo = TRUE}
-summary(cars)
+# Building an R package
+build_package()
+
+# Distribution of your R package
+distribute_package()
+
 ```
 
+```{r setup2, echo=FALSE, message=FALSE}
+library(dplyr)
+library(here)
+```
+
+## Best practices for R package design
+
+```{r pam, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/pam.jpeg")
+```
+
+## What is a design document
+
+## Why use a design document
+ - splits the work into two steps (thinking and coding)
+ - makes you explain everything in detail (so you can know if you understand the details)
+ - helps you predict problems/tricky points
+ - helps you divide the work into reasonable modules so you can split it between days or people and make sure it it will come together seamlessly
+ - Helps future you/developers understand what you had done so that you can create improvements or additions
+
+## What to include in your design document
+ - goal of each function
+ - inputs and outputs of each
+ - flow chart between functions
+ - calculations/equations
+ - any tricky points
+ - numerical stability considerations 
+ - how you will approach each function, including pseudo code if it’s nontrivial
+ - tests you will implement (again goals, details)
+ - Helpful sketches
+ - Major updates
+ - Things you want to add/change in the future
+
+## Building an R package 
+
+```{r lego1, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/lego.jpeg")
+```
+
+## Create the Package
+
+Building a package used to take a lot of expert knowledge. However, several R packages exist that now make the process extremely accessible.
+
+```{r setup3, eval=FALSE, message=FALSE}
+#install.packages('testthat', 'devtools', 
+#                 'roxygen2', 'usethis')
+library(testthat)
+library(devtools)
+library(roxygen2)
+library(usethis)
+
+usethis::create_package("~/MyFirstPackage")
+# usethis::use_testthat() #if you want to add tests
+usethis::use_git() #if you want to use Git
+
+```
+
+## Add your functions
+```{r setup4, eval=FALSE, message=FALSE}
+
+usethis::use_r('target_psrf')
+usethis::use_r('minESS')
+
+```
+
+## Write (or copy/paste) functions
+
+```{r miness, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/partialfunc.jpeg")
+```
+
+## Add documentation for functions - Roxygen
+
+```{r miness2, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/fullfunc.jpeg")
+```
+
+## Add documentation for functions - Roxygen
+
+```{r doc, echo=FALSE, out.width = '75%'}
+knitr::include_graphics("pics/doc.jpg")
+```
+
+## Check, build, and install your package
+
+```{r check, eval = FALSE, echo=TRUE}
+devtools::check()
+devtools::build()
+devtools::install()
+```
+
+Or use the build tools in Rstudio
+```{r build, echo=FALSE, out.width = '80%'}
+knitr::include_graphics("pics/buildtools.jpg")
+```
+
+## Customize!
+
+- Add tests
+- Add other package dependencies
+- Add vignettes
+
+```{r bedazzle, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/bedazzler.jpg")
+```
+
+## Distribution of Your R Package
+
+```{r janet, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/janets.png")
+```
+
+## Why Distribute Your R Package?
+
+From David Robinson's excellent talk at rstudio::conf(2019)
+
+```{r dr, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/dr.jpeg")
+```
+
+## Why Distribute Your R Package?
+
+- Gains in usership/citations for those in the public domain (academics, nonprofits)
+- Gains in productivity for those in private industries
+- Saving future you time
+
+## Using Version Control
+
+```{r organized, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/ann.jpg")
+```
+
+## Using Version Control
+
+- This is not a Git talk, but Git has become a dominant version control technique so we are demo-ing our work on Github
+- An amazing and free resource for R users is Jenny Brian's book: https://happygitwithr.com/
+
+How this is useful to audit
+Production version control - put R in prod
+Focus more on why to use - maybe RStudio easy integration with github
+
+How this is useful to audit/third parties
+Easy to track changes over time
+Issue driven development (working with teams) https://github.com/tidyverse/dplyr/issues
+Production version control - put R in prod reference to talk
+
+## Where to Find Us
+
+Find this presentation at: https://github.com/knudson1/WiADS2020/blob/master/doc/Presentation_Slides.pdf
+
+*Lindsey Dietz*
+
+ - Email: lindseydietz13@gmail.com
+ - LinkedIn: https://www.linkedin.com/in/lindseydietz/
+ - Twitter: https://twitter.com/lindseydietz13
+
+*Christina Knudson*
+
+ - Email: knud8583@stthomas.edu
+ - LinkedIn: https://www.linkedin.com/in/christinaknudson/
+ - Twitter: https://twitter.com/canoodleson
