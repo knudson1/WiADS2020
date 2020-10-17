@@ -6,7 +6,7 @@ test_that("Target PSRF works", {
   epsilon <- 0.05
 
   # Calculate using function
-  out1a <- MyFirstPackage::target.psrf(p = p, epsilon = epsilon, m = m, alpha = alpha)
+  out1a <- MyFirstPackage::target_psrf(p = p, epsilon = epsilon, m = m, alpha = alpha)
 
   # Calculate by hand
   Tee <- as.numeric(MyFirstPackage::minESS(p = p, epsilon = epsilon, alpha = alpha))

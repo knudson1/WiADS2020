@@ -23,7 +23,9 @@ minESS(p = 2, alpha = 0.10, epsilon = 0.05)
 }
 \references{
 D. Vats, J. Flegal, & G. Jones 2019. Multivariate output analysis for Markov chain Monte Carlo.
-Biometrika, Volume 106, Issue 2, June 2019, Pages 321–337, https://doi.org/10.1093/biomet/asz002
+Biometrika, Volume 106, Issue 2, June 2019,
+Pages 321–337, https://doi.org/10.1093/biomet/asz002
 
-D. Vats and C. Knudson. Revisiting the Gelman-Rubin Diagnostic. https://arxiv.org/abs/1812.09384
+D. Vats and C. Knudson.
+Revisiting the Gelman-Rubin Diagnostic. https://arxiv.org/abs/1812.09384
 }
