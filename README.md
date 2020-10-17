@@ -23,12 +23,7 @@ devtools::install_github("knudson1/WiADS2020")
 
 ## Talk Slides
 
-``` r
-library(MyFirstPackage)
-
-vignette(package = 'MyFirstPackage')
-#> no vignettes found
-```
+<https://github.com/knudson1/WiADS2020/blob/master/doc/Presentation_Slides.pdf>
 
 ## Example
 
@@ -42,7 +37,7 @@ minESS(p = 2, alpha = 0.05, epsilon = 0.05)
 #> [1] 7529
 
 #Calculate target PSRF using 5 chains
-target.psrf(m = 5, p = 2, alpha = 0.05, epsilon = 0.05)
+target_psrf(m = 5, p = 2, alpha = 0.05, epsilon = 0.05)
 #> $psrf
 #> [1] 1.000332
 #> 
