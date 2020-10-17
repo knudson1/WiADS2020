@@ -32,14 +32,13 @@ The views expressed in this presentation are strictly my own. They do not necess
 
 ## About Us
 
- - Met in our Statistics PhD program in 2011
+ - Friends since meeting in our Statistics PhD program in 2011
  - Co-organizers of R Ladies-Twin Cities and the noRth conference
- - Cyclists & coffee lovers
+ - Both cyclists & coffee lovers
  
 ```{r ldck, echo=FALSE, out.width = '50%'}
 knitr::include_graphics("pics/ldck.jpg")
 ```
-
 
 ## Objectives of this talk
 
@@ -204,6 +203,8 @@ Issue driven development (working with teams) https://github.com/tidyverse/dplyr
 Production version control - put R in prod reference to talk
 
 ## Where to Find Us
+
+Find this presentation at: https://github.com/knudson1/WiADS2020/blob/master/doc/Presentation_Slides.pdf
 
 *Lindsey Dietz*
 
