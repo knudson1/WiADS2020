@@ -22,11 +22,12 @@ devtools::install_github("knudson1/WiADS2020", build_vignettes = TRUE)
 After installing, you can access the slides using the following code:
 
 ``` r
-vignette("2020_WiADS_Slides")
+library(MyFirstPackage)
+vignette("WiADS_Slides")
 ```
 
 You can also get there directly using the link:
-<https://github.com/knudson1/WiADS2020/blob/master/doc/Presentation_Slides.pdf>
+<https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf>
 
 ## Example
 
