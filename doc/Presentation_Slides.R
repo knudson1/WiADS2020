@@ -21,10 +21,6 @@ knitr::include_graphics("pics/ldck.jpg")
 #  distribute_package()
 #  
 
-## ----setup2, echo=FALSE, message=FALSE----------------------------------------
-library(dplyr)
-library(here)
-
 ## ----pam, echo=FALSE, out.width = '100%'--------------------------------------
 knitr::include_graphics("pics/pam.jpeg")
 

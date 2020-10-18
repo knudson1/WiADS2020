@@ -14,7 +14,7 @@ output:
     fonttheme: "structurebold"
     highlight: haddock
 vignette: >
-  %\VignetteIndexEntry{Presentation_Slides}
+  %\VignetteIndexEntry{2020_WiADS_Slides}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -54,11 +54,6 @@ build_package()
 # Distribution of your R package
 distribute_package()
 
-```
-
-```{r setup2, echo=FALSE, message=FALSE}
-library(dplyr)
-library(here)
 ```
 
 ## Best practices for R package design

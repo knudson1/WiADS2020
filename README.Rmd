@@ -15,9 +15,6 @@ knitr::opts_chunk$set(
 
 # MyFirstPackage
 
-<!-- badges: start -->
-<!-- badges: end -->
-
 The goal of MyFirstPackage is to accompany the talk by Dietz & Knudson at the Minneanalytics Women in Analytics and Data Science conference held on October 30, 2020.
 
 ## Installation
@@ -26,12 +23,16 @@ You can install the development version of MyFirstPackage from [GitHub](https://
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("knudson1/WiADS2020")
+devtools::install_github("knudson1/WiADS2020", build_vignettes = TRUE)
 ```
 
 ## Talk Slides
 
-https://github.com/knudson1/WiADS2020/blob/master/doc/Presentation_Slides.pdf
+After installing, you can access the slides using the following code:
+``` r
+vignette("2020_WiADS_Slides")
+```
+You can also get there directly using the link: https://github.com/knudson1/WiADS2020/blob/master/doc/Presentation_Slides.pdf
 
 ## Example
 
