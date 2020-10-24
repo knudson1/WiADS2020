@@ -41,16 +41,10 @@ knitr::include_graphics("pics/BurningSmellsLike.jpg")
 knitr::include_graphics("pics/lego.jpeg")
 
 ## ----setup3, eval=FALSE, message=FALSE----------------------------------------
-#  #install.packages('testthat', 'devtools',
-#  #                 'roxygen2', 'usethis')
-#  library(testthat)
-#  library(devtools)
-#  library(roxygen2)
+#  #install.packages('usethis')
 #  library(usethis)
 #  
 #  usethis::create_package("~/MyFirstPackage")
-#  # usethis::use_testthat() #if you want to add tests
-#  usethis::use_git() #if you want to use Git
 #  
 
 ## ----setup4, eval=FALSE, message=FALSE----------------------------------------
@@ -68,13 +62,13 @@ knitr::include_graphics("pics/fullfunc.jpeg")
 ## ----doc, echo=FALSE, out.width = '75%'---------------------------------------
 knitr::include_graphics("pics/doc.jpg")
 
+## ----build, echo=FALSE, out.width = '80%'-------------------------------------
+knitr::include_graphics("pics/check.jpg")
+
 ## ----check, eval = FALSE, echo=TRUE-------------------------------------------
 #  devtools::check()
 #  devtools::build()
 #  devtools::install()
-
-## ----build, echo=FALSE, out.width = '80%'-------------------------------------
-knitr::include_graphics("pics/buildtools.jpg")
 
 ## ----bedazzle, echo=FALSE, out.width = '100%'---------------------------------
 knitr::include_graphics("pics/bedazzler.jpg")
