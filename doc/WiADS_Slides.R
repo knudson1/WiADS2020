@@ -24,6 +24,18 @@ knitr::include_graphics("pics/ldck.jpg")
 ## ----pam, echo=FALSE, out.width = '100%'--------------------------------------
 knitr::include_graphics("pics/pam.jpeg")
 
+## ---- echo=FALSE, out.width = '100%'------------------------------------------
+knitr::include_graphics("pics/twoseparate.jpg")
+
+## ---- echo=FALSE, out.width = '80%'-------------------------------------------
+knitr::include_graphics("pics/FoldItIn.jpg")
+
+## ---- echo=FALSE, out.width = '50%'-------------------------------------------
+knitr::include_graphics("pics/LadleStir.jpg")
+
+## ---- echo=FALSE, out.width = '50%'-------------------------------------------
+knitr::include_graphics("pics/BurningSmellsLike.jpg")
+
 ## ----lego1, echo=FALSE, out.width = '100%'------------------------------------
 knitr::include_graphics("pics/lego.jpeg")
 

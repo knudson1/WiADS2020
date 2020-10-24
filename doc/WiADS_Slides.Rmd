@@ -62,27 +62,77 @@ distribute_package()
 knitr::include_graphics("pics/pam.jpeg")
 ```
 
-## What is a design document
+## What is a design document?
 
-## Why use a design document
- - splits the work into two steps (thinking and coding)
- - makes you explain everything in detail (so you can know if you understand the details)
- - helps you predict problems/tricky points
- - helps you divide the work into reasonable modules so you can split it between days or people and make sure it it will come together seamlessly
+ - A blueprint or recipe for your project with plenty of details
+ - Doc written with the understanding that future-you will forget these details otherwise
+
+
+## Why use a design document? (1 of 5)
+ - [Watch this video first!](https://www.youtube.com/watch?v=NywzrUJnmTo
+ )
+ 
+## Why use a design document? (2 of 5)
+
+ - Separates thinking and coding
+ 
+
+```{r , echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/twoseparate.jpg")
+```
+
+ Imagine creating enchiladas without a recipe!
+
+## Why use a design document? (3 of 5)
+
+ - Forces you to explain everything in detail 
+ - Helps you predict problems and tricky points 
+
+```{r , echo=FALSE, out.width = '80%'}
+knitr::include_graphics("pics/FoldItIn.jpg")
+```
+ 
+## Why use a design document? (4 of 5)
+
+ - Helps you divide the work into reasonable modules so you can split it between days or people and make sure it it will come together seamlessly
+
+```{r , echo=FALSE, out.width = '50%'}
+knitr::include_graphics("pics/LadleStir.jpg")
+```
+ 
+ No need to ladle and stir at the same time.
+
+ 
+## Why use a design document? (5 of 5)
+ 
  - Helps future you/developers understand what you had done so that you can create improvements or additions
+ - Helps you remember everything you'll inevitably forget
+ 
+```{r , echo=FALSE, out.width = '50%'}
+knitr::include_graphics("pics/BurningSmellsLike.jpg")
+```
+
+
+ 
 
 ## What to include in your design document
- - goal of each function
- - inputs and outputs of each
- - flow chart between functions
- - calculations/equations
- - any tricky points
- - numerical stability considerations 
- - how you will approach each function, including pseudo code if it’s nontrivial
- - tests you will implement (again goals, details)
+ - Goal of each function
+ - Inputs and outputs of each
+ - Flow chart between functions
+ - Calculations/equations
+ - Any tricky points
+ - Numerical stability considerations 
+ - How you will approach each function (and some pseudo code)
+ - Tests you will implement (again goals, details)
  - Helpful sketches
  - Major updates
  - Things you want to add/change in the future
+ 
+## Examples of Design Docs
+
+- [glmm](https://github.com/knudson1/glmm/blob/master/DesignDocs/DesignDocGLMM.pdf) 
+- [stableGR](https://github.com/knudson1/stableGR/blob/master/DesignDoc/Revisiting_GR.pdf)
+
 
 ## Building an R package 
 

@@ -109,7 +109,7 @@ knitr::include_graphics("pics/LadleStir.jpg")
  - Helps you remember everything you'll inevitably forget
  
 ```{r , echo=FALSE, out.width = '50%'}
-knitr::include_graphics("pics/MothersRecipe.jpg")
+knitr::include_graphics("pics/BurningSmellsLike.jpg")
 ```
 
 
