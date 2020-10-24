@@ -120,6 +120,16 @@
 
 <span class="co">#Profit!</span></pre></div>
 </div>
+<div id="our-assumptions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#our-assumptions" class="anchor"></a>Our Assumptions</h2>
+<ul>
+<li>You have some experience programming in R</li>
+<li>You have some experience on Git (i.e. we won’t show you how to set it up)</li>
+<li>You have some custom R functions on your computer that get used repeatedly</li>
+<li>You have an audience (including yourself) for your code</li>
+</ul>
+</div>
 <div id="best-practices-for-r-package-design" class="section level2">
 <h2 class="hasAnchor">
 <a href="#best-practices-for-r-package-design" class="anchor"></a>Best practices for R package design</h2>
@@ -209,50 +219,58 @@
 <div id="create-the-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#create-the-package" class="anchor"></a>Create the Package</h2>
-<p>Building a package used to take a lot of expert knowledge. However, several R packages exist that now make the process extremely accessible.</p>
+<ul>
+<li><p>Building a package used to take a lot of expert knowledge. Not anymore!</p></li>
+<li><p>Several R packages exist that make the process extremely accessible</p></li>
+<li><p>Option #1 - Use the Rstudio interface: File -&gt; New Project -&gt; New Directory -&gt; R Package</p></li>
+<li><p>Option #2 - Use the aptly named <code>usethis</code> package</p></li>
+</ul>
 <div class="sourceCode" id="cb2"><pre class="downlit">
-<span class="co">#install.packages('testthat', 'devtools', </span>
-<span class="co">#                 'roxygen2', 'usethis')</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://testthat.r-lib.org">testthat</a></span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">devtools</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">roxygen2</span><span class="op">)</span>
+<span class="co">#install.packages('usethis')</span>
 <span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">usethis</span><span class="op">)</span>
 
-<span class="fu">usethis</span><span class="fu">::</span><span class="fu">create_package</span><span class="op">(</span><span class="st">"~/MyFirstPackage"</span><span class="op">)</span>
-<span class="co"># usethis::use_testthat() #if you want to add tests</span>
-<span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_git</span><span class="op">(</span><span class="op">)</span> <span class="co">#if you want to use Git</span></pre></div>
+<span class="fu">usethis</span><span class="fu">::</span><span class="fu">create_package</span><span class="op">(</span><span class="st">"~/MyFirstPackage"</span><span class="op">)</span> </pre></div>
 </div>
 <div id="add-your-functions" class="section level2">
 <h2 class="hasAnchor">
 <a href="#add-your-functions" class="anchor"></a>Add your functions</h2>
+<ul>
+<li>Option #1 - Create .R files with your function and move them into the package’s R folder</li>
+<li>Option #2 - <code>usethis</code> package</li>
+</ul>
 <div class="sourceCode" id="cb3"><pre class="downlit">
 
 <span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_r</span><span class="op">(</span><span class="st">'target_psrf'</span><span class="op">)</span>
 <span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_r</span><span class="op">(</span><span class="st">'minESS'</span><span class="op">)</span></pre></div>
 </div>
-<div id="write-or-copypaste-functions" class="section level2">
+<div id="create-or-copypaste-functions" class="section level2">
 <h2 class="hasAnchor">
-<a href="#write-or-copypaste-functions" class="anchor"></a>Write (or copy/paste) functions</h2>
+<a href="#create-or-copypaste-functions" class="anchor"></a>Create (or copy/paste) functions</h2>
 <p><img src="pics/partialfunc.jpeg" width="100%"></p>
 </div>
-<div id="add-documentation-for-functions---roxygen" class="section level2">
+<div id="add-help-documentation-for-functions" class="section level2">
 <h2 class="hasAnchor">
-<a href="#add-documentation-for-functions---roxygen" class="anchor"></a>Add documentation for functions - Roxygen</h2>
-<p><img src="pics/fullfunc.jpeg" width="100%"></p>
+<a href="#add-help-documentation-for-functions" class="anchor"></a>Add help documentation for functions</h2>
+<ul>
+<li>In an R package, help documentation is mandatory; good documentation is optional (but not really!)</li>
+<li>While you can create documents manually (in the man folder), the <code>roxygen2</code> package makes it easy to create the documentation with your code <img src="pics/fullfunc.jpeg" width="100%">
+</li>
+</ul>
 </div>
-<div id="add-documentation-for-functions---roxygen-1" class="section level2">
+<div id="help-documentation-generated-by-roxygen2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#add-documentation-for-functions---roxygen-1" class="anchor"></a>Add documentation for functions - Roxygen</h2>
+<a href="#help-documentation-generated-by-roxygen2" class="anchor"></a>Help documentation generated by roxygen2</h2>
 <p><img src="pics/doc.jpg" width="75%"></p>
 </div>
 <div id="check-build-and-install-your-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#check-build-and-install-your-package" class="anchor"></a>Check, build, and install your package</h2>
+<p>Option #1 Use the tools in Rstudio <img src="pics/check.jpg" width="80%"></p>
+<p>Option #2 Use the <code>devtools</code> package (can be useful when things get more complicated)</p>
 <div class="sourceCode" id="cb4"><pre class="downlit">
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">check</span><span class="op">(</span><span class="op">)</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">build</span><span class="op">(</span><span class="op">)</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install</span><span class="op">(</span><span class="op">)</span></pre></div>
-<p>Or use the build tools in Rstudio <img src="pics/buildtools.jpg" width="80%"></p>
 </div>
 <div id="customize" class="section level2">
 <h2 class="hasAnchor">
