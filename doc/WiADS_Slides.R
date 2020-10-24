@@ -5,7 +5,7 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-## ----ldck, echo=FALSE, out.width = '50%'--------------------------------------
+## ----ldck, echo=FALSE, out.width = '50%', fig.align='center'------------------
 knitr::include_graphics("pics/ldck.jpg")
 
 ## ----setup, message=FALSE, eval=FALSE-----------------------------------------
@@ -17,7 +17,7 @@ knitr::include_graphics("pics/ldck.jpg")
 #  # Build your R package
 #  build_package()
 #  
-#  # Distribute of your R package
+#  # Distribute your R package
 #  distribute_package()
 #  
 #  #Profit!
@@ -81,4 +81,7 @@ knitr::include_graphics("pics/dr.jpeg")
 
 ## ----organized, echo=FALSE, out.width = '100%'--------------------------------
 knitr::include_graphics("pics/ann.jpg")
+
+## ----incepted, echo=FALSE, out.width = '100%'---------------------------------
+knitr::include_graphics("pics/inception.jpg")
 

@@ -1,12 +1,13 @@
 ---
 title: "Software Design, Development, and Distribution in R"
+subtitle: "MinneAnalytics Women in Analytics and Data Science"
 author: 
    - Lindsey Dietz, PhD$^1$
    - Christina Knudson, PhD$^2$
 institute: 
-   - $^1$Financial Economist, Federal Reserve Bank of Minneapolis
-   - $^2$Asst. Professor of Statistics, University of Saint Thomas
-date: "2020-10-30"
+   - $^1$Financial Economist, Federal Reserve Bank of Minneapolis \newline lindseydietz13@gmail.com; @lindseydietz13
+   - $^2$Asst. Professor of Statistics, University of Saint Thomas \newline knud8583@stthomas.edu; @canoodleson
+date: 2020-10-30 \newline \newline https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf
 output: 
   beamer_presentation:
     theme: "default"
@@ -36,7 +37,7 @@ The views expressed in this presentation are strictly my own. They do not necess
  - Co-organizers of R Ladies-Twin Cities and the noRth conference
  - Both cyclists & coffee lovers
  
-```{r ldck, echo=FALSE, out.width = '50%'}
+```{r ldck, echo=FALSE, out.width = '50%', fig.align='center'}
 knitr::include_graphics("pics/ldck.jpg")
 ```
 
@@ -51,7 +52,7 @@ design_package()
 # Build your R package
 build_package()
 
-# Distribute of your R package
+# Distribute your R package
 distribute_package()
 
 #Profit!
@@ -136,15 +137,18 @@ knitr::include_graphics("pics/BurningSmellsLike.jpg")
 - [stableGR](https://github.com/knudson1/stableGR/blob/master/DesignDoc/Revisiting_GR.pdf)
 
 
-## Building an R package 
+## Building An R Package 
 
 ```{r lego1, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/lego.jpeg")
 ```
 
+ - You have the building blocks - (1) repeatable processes + (2) custom functions
+ - You have a design document that lays out what your tree will look like 
+
 ## Create the Package
 
- - Building a package used to take a lot of expert knowledge. Not anymore!
+ - Building a package used to take expert knowledge. Not anymore!
  - Several R packages exist that make the process extremely accessible
 
  - Option #1 - Use the Rstudio interface: File -> New Project -> New Directory -> R Package
@@ -158,7 +162,7 @@ usethis::create_package("~/MyFirstPackage")
 
 ```
 
-## Add your functions
+## Add files for your functions
 
  - Option #1 - Create .R files with your function and move them into the package's R folder
  - Option #2 - `usethis` package
@@ -169,6 +173,8 @@ usethis::use_r('target_psrf')
 usethis::use_r('minESS')
 
 ```
+
+If R functions are new to you, check out this resource: https://r4ds.had.co.nz/functions.html
 
 ## Create (or copy/paste) functions
 
@@ -204,11 +210,10 @@ devtools::build()
 devtools::install()
 ```
 
-## Customize!
+## Customize
 
-- Add tests
-- Add other package dependencies
-- Add vignettes
+- Add tests, package dependencies, vignettes!
+- A comprehensive R package building resource: https://r-pkgs.org/index.html
 
 ```{r bedazzle, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/bedazzler.jpg")
@@ -232,40 +237,37 @@ knitr::include_graphics("pics/dr.jpeg")
 
 - Gains in usership/citations for those in the public domain (academics, nonprofits)
 - Gains in productivity for those in private industries
-- Saving future you time
+- Saving future you time with third parties such as audit
+- You control the narrative of your code
 
-## Using Version Control
+## Distibution in Git
 
+ - Git has become a dominant version control technique so we are demo-ing our work on Github
+ - Git makes it easy to (1) track changes over time (2) plan future changes (3) work with teams
+ - Git is well integrated into RStudio
+ 
 ```{r organized, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/ann.jpg")
 ```
 
-## Using Version Control
+## Git Jargon
 
-- This is not a Git talk, but Git has become a dominant version control technique so we are demo-ing our work on Github
-- An amazing and free resource for R users is Jenny Brian's book: https://happygitwithr.com/
+ - Git has A LOT of jargon. Don't let it overwhelm you and ask questions of those who use it as a second language. (https://git-scm.com/docs)
+ - Some start-up words: 
+   + repository - a remote folder for your things on your Git site of choice (Github, GitLab, etc.)
+   + clone - make a copy of your remote repository on your computer
+   + pull - incorporate changes from a remote repository into your local clone
+   + commit - record changes to your local clone
+   + push - update remote repository with changes from your commits
+ - An amazing and free resource for R users is Jenny Brian's book: https://happygitwithr.com/
 
-How this is useful to audit
-Production version control - put R in prod
-Focus more on why to use - maybe RStudio easy integration with github
 
-How this is useful to audit/third parties
-Easy to track changes over time
-Issue driven development (working with teams) https://github.com/tidyverse/dplyr/issues
-Production version control - put R in prod reference to talk
+## The Beginning
 
-## Where to Find Us
+ - Thanks for being here and to the WiADS organizers for making a great conference happen
+ - We hope we've planted the seeds for you to build R packages to showcase your work going forward
+ 
+ ```{r incepted, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/inception.jpg")
+```
 
-Find this presentation at: https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf
-
-*Lindsey Dietz*
-
- - Email: lindseydietz13@gmail.com
- - LinkedIn: https://www.linkedin.com/in/lindseydietz/
- - Twitter: https://twitter.com/lindseydietz13
-
-*Christina Knudson*
-
- - Email: knud8583@stthomas.edu
- - LinkedIn: https://www.linkedin.com/in/christinaknudson/
- - Twitter: https://twitter.com/canoodleson
