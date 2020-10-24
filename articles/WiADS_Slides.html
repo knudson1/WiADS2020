@@ -74,12 +74,14 @@
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Software Design, Development, and Distribution in R</h1>
+            <h3 class="subtitle">MinneAnalytics Women in Analytics and Data Science</h3>
                         <h4 class="author">Lindsey Dietz, PhD<span class="math inline">\(^1\)</span>
 </h4>
                         <h4 class="author">Christina Knudson, PhD<span class="math inline">\(^2\)</span>
 </h4>
             
-            <h4 class="date">2020-10-30</h4>
+            <h4 class="date">2020-10-30 <a href="https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf" class="uri">https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf</a>
+</h4>
       
       
       <div class="hidden name"><code>WiADS_Slides.Rmd</code></div>
@@ -101,7 +103,7 @@
 <li>Co-organizers of R Ladies-Twin Cities and the noRth conference</li>
 <li>Both cyclists &amp; coffee lovers</li>
 </ul>
-<p><img src="pics/ldck.jpg" width="50%"></p>
+<p><img src="pics/ldck.jpg" width="50%" style="display: block; margin: auto;"></p>
 </div>
 <div id="objectives-of-this-talk" class="section level2">
 <h2 class="hasAnchor">
@@ -115,7 +117,7 @@
 <span class="co"># Build your R package</span>
 <span class="fu">build_package</span><span class="op">(</span><span class="op">)</span>
 
-<span class="co"># Distribute of your R package</span>
+<span class="co"># Distribute your R package</span>
 <span class="fu">distribute_package</span><span class="op">(</span><span class="op">)</span>
 
 <span class="co">#Profit!</span></pre></div>
@@ -213,14 +215,18 @@
 </div>
 <div id="building-an-r-package" class="section level2">
 <h2 class="hasAnchor">
-<a href="#building-an-r-package" class="anchor"></a>Building an R package</h2>
+<a href="#building-an-r-package" class="anchor"></a>Building An R Package</h2>
 <p><img src="pics/lego.jpeg" width="100%"></p>
+<ul>
+<li>You have the building blocks - (1) repeatable processes + (2) custom functions</li>
+<li>You have a design document that lays out what your tree will look like</li>
+</ul>
 </div>
 <div id="create-the-package" class="section level2">
 <h2 class="hasAnchor">
 <a href="#create-the-package" class="anchor"></a>Create the Package</h2>
 <ul>
-<li><p>Building a package used to take a lot of expert knowledge. Not anymore!</p></li>
+<li><p>Building a package used to take expert knowledge. Not anymore!</p></li>
 <li><p>Several R packages exist that make the process extremely accessible</p></li>
 <li><p>Option #1 - Use the Rstudio interface: File -&gt; New Project -&gt; New Directory -&gt; R Package</p></li>
 <li><p>Option #2 - Use the aptly named <code>usethis</code> package</p></li>
@@ -231,9 +237,9 @@
 
 <span class="fu">usethis</span><span class="fu">::</span><span class="fu">create_package</span><span class="op">(</span><span class="st">"~/MyFirstPackage"</span><span class="op">)</span> </pre></div>
 </div>
-<div id="add-your-functions" class="section level2">
+<div id="add-files-for-your-functions" class="section level2">
 <h2 class="hasAnchor">
-<a href="#add-your-functions" class="anchor"></a>Add your functions</h2>
+<a href="#add-files-for-your-functions" class="anchor"></a>Add files for your functions</h2>
 <ul>
 <li>Option #1 - Create .R files with your function and move them into the package’s R folder</li>
 <li>Option #2 - <code>usethis</code> package</li>
@@ -242,6 +248,7 @@
 
 <span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_r</span><span class="op">(</span><span class="st">'target_psrf'</span><span class="op">)</span>
 <span class="fu">usethis</span><span class="fu">::</span><span class="fu">use_r</span><span class="op">(</span><span class="st">'minESS'</span><span class="op">)</span></pre></div>
+<p>If R functions are new to you, check out this resource: <a href="https://r4ds.had.co.nz/functions.html" class="uri">https://r4ds.had.co.nz/functions.html</a></p>
 </div>
 <div id="create-or-copypaste-functions" class="section level2">
 <h2 class="hasAnchor">
@@ -274,11 +281,11 @@
 </div>
 <div id="customize" class="section level2">
 <h2 class="hasAnchor">
-<a href="#customize" class="anchor"></a>Customize!</h2>
+<a href="#customize" class="anchor"></a>Customize</h2>
 <ul>
-<li>Add tests</li>
-<li>Add other package dependencies</li>
-<li>Add vignettes</li>
+<li>Add tests, package dependencies, vignettes!</li>
+<li>A comprehensive R package building resource: <a href="https://r-pkgs.org/index.html" class="uri">https://r-pkgs.org/index.html</a>
+</li>
 </ul>
 <p><img src="pics/bedazzler.jpg" width="100%"></p>
 </div>
@@ -299,47 +306,46 @@
 <ul>
 <li>Gains in usership/citations for those in the public domain (academics, nonprofits)</li>
 <li>Gains in productivity for those in private industries</li>
-<li>Saving future you time</li>
+<li>Saving future you time with third parties such as audit</li>
+<li>You control the narrative of your code</li>
 </ul>
 </div>
-<div id="using-version-control" class="section level2">
+<div id="distibution-in-git" class="section level2">
 <h2 class="hasAnchor">
-<a href="#using-version-control" class="anchor"></a>Using Version Control</h2>
+<a href="#distibution-in-git" class="anchor"></a>Distibution in Git</h2>
+<ul>
+<li>Git has become a dominant version control technique so we are demo-ing our work on Github</li>
+<li>Git makes it easy to (1) track changes over time (2) plan future changes (3) work with teams</li>
+<li>Git is well integrated into RStudio</li>
+</ul>
 <p><img src="pics/ann.jpg" width="100%"></p>
 </div>
-<div id="using-version-control-1" class="section level2">
+<div id="git-jargon" class="section level2">
 <h2 class="hasAnchor">
-<a href="#using-version-control-1" class="anchor"></a>Using Version Control</h2>
+<a href="#git-jargon" class="anchor"></a>Git Jargon</h2>
 <ul>
-<li>This is not a Git talk, but Git has become a dominant version control technique so we are demo-ing our work on Github</li>
+<li>Git has A LOT of jargon. Don’t let it overwhelm you and ask questions of those who use it as a second language. (<a href="https://git-scm.com/docs" class="uri">https://git-scm.com/docs</a>)</li>
+<li>Some start-up words:
+<ul>
+<li>repository - a remote folder for your things on your Git site of choice (Github, GitLab, etc.)</li>
+<li>clone - make a copy of your remote repository on your computer</li>
+<li>pull - incorporate changes from a remote repository into your local clone</li>
+<li>commit - record changes to your local clone</li>
+<li>push - update remote repository with changes from your commits</li>
+</ul>
+</li>
 <li>An amazing and free resource for R users is Jenny Brian’s book: <a href="https://happygitwithr.com/" class="uri">https://happygitwithr.com/</a>
 </li>
 </ul>
-<p>How this is useful to audit Production version control - put R in prod Focus more on why to use - maybe RStudio easy integration with github</p>
-<p>How this is useful to audit/third parties Easy to track changes over time Issue driven development (working with teams) <a href="https://github.com/tidyverse/dplyr/issues" class="uri">https://github.com/tidyverse/dplyr/issues</a> Production version control - put R in prod reference to talk</p>
 </div>
-<div id="where-to-find-us" class="section level2">
+<div id="the-beginning" class="section level2">
 <h2 class="hasAnchor">
-<a href="#where-to-find-us" class="anchor"></a>Where to Find Us</h2>
-<p>Find this presentation at: <a href="https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf" class="uri">https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf</a></p>
-<p><em>Lindsey Dietz</em></p>
+<a href="#the-beginning" class="anchor"></a>The Beginning</h2>
 <ul>
-<li>Email: <a href="mailto:lindseydietz13@gmail.com" class="email">lindseydietz13@gmail.com</a>
-</li>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/lindseydietz/" class="uri">https://www.linkedin.com/in/lindseydietz/</a>
-</li>
-<li>Twitter: <a href="https://twitter.com/lindseydietz13" class="uri">https://twitter.com/lindseydietz13</a>
-</li>
+<li>Thanks for being here and to the WiADS organizers for making a great conference happen</li>
+<li>We hope we’ve planted the seeds for you to build R packages to showcase your work going forward</li>
 </ul>
-<p><em>Christina Knudson</em></p>
-<ul>
-<li>Email: <a href="mailto:knud8583@stthomas.edu" class="email">knud8583@stthomas.edu</a>
-</li>
-<li>LinkedIn: <a href="https://www.linkedin.com/in/christinaknudson/" class="uri">https://www.linkedin.com/in/christinaknudson/</a>
-</li>
-<li>Twitter: <a href="https://twitter.com/canoodleson" class="uri">https://twitter.com/canoodleson</a>
-</li>
-</ul>
+<p><img src="pics/inception.jpg" width="100%"></p>
 </div>
   </div>
 
