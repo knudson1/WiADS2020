@@ -76,7 +76,7 @@ knitr::include_graphics("pics/bedazzler.jpg")
 ## ----janet, echo=FALSE, out.width = '100%'------------------------------------
 knitr::include_graphics("pics/janets.png")
 
-## ----dr, echo=FALSE, out.width = '100%'---------------------------------------
+## ----dr, echo=FALSE, out.width = '90%'----------------------------------------
 knitr::include_graphics("pics/dr.jpeg")
 
 ## ----organized, echo=FALSE, out.width = '100%'--------------------------------
