@@ -69,7 +69,8 @@
 
       
 
-      </header><script src="WiADS_Slides_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><script src="WiADS_Slides_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="WiADS_Slides_files/anchor-sections-1.0/anchor-sections.css" rel="stylesheet">
+<script src="WiADS_Slides_files/anchor-sections-1.0/anchor-sections.js"></script><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Software Design, Development, and Distribution in R</h1>
@@ -124,34 +125,78 @@
 </div>
 <div id="what-is-a-design-document" class="section level2">
 <h2 class="hasAnchor">
-<a href="#what-is-a-design-document" class="anchor"></a>What is a design document</h2>
-</div>
-<div id="why-use-a-design-document" class="section level2">
-<h2 class="hasAnchor">
-<a href="#why-use-a-design-document" class="anchor"></a>Why use a design document</h2>
+<a href="#what-is-a-design-document" class="anchor"></a>What is a design document?</h2>
 <ul>
-<li>splits the work into two steps (thinking and coding)</li>
-<li>makes you explain everything in detail (so you can know if you understand the details)</li>
-<li>helps you predict problems/tricky points</li>
-<li>helps you divide the work into reasonable modules so you can split it between days or people and make sure it it will come together seamlessly</li>
-<li>Helps future you/developers understand what you had done so that you can create improvements or additions</li>
+<li>A blueprint or recipe for your project with plenty of details</li>
+<li>Doc written with the understanding that future-you will forget these details otherwise</li>
 </ul>
+</div>
+<div id="why-use-a-design-document-1-of-5" class="section level2">
+<h2 class="hasAnchor">
+<a href="#why-use-a-design-document-1-of-5" class="anchor"></a>Why use a design document? (1 of 5)</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=NywzrUJnmTo">Watch this video first!</a></li>
+</ul>
+</div>
+<div id="why-use-a-design-document-2-of-5" class="section level2">
+<h2 class="hasAnchor">
+<a href="#why-use-a-design-document-2-of-5" class="anchor"></a>Why use a design document? (2 of 5)</h2>
+<ul>
+<li>Separates thinking and coding</li>
+</ul>
+<p><img src="pics/twoseparate.jpg" width="100%"></p>
+<p>Imagine creating enchiladas without a recipe!</p>
+</div>
+<div id="why-use-a-design-document-3-of-5" class="section level2">
+<h2 class="hasAnchor">
+<a href="#why-use-a-design-document-3-of-5" class="anchor"></a>Why use a design document? (3 of 5)</h2>
+<ul>
+<li>Forces you to explain everything in detail</li>
+<li>Helps you predict problems and tricky points</li>
+</ul>
+<p><img src="pics/FoldItIn.jpg" width="80%"></p>
+</div>
+<div id="why-use-a-design-document-4-of-5" class="section level2">
+<h2 class="hasAnchor">
+<a href="#why-use-a-design-document-4-of-5" class="anchor"></a>Why use a design document? (4 of 5)</h2>
+<ul>
+<li>Helps you divide the work into reasonable modules so you can split it between days or people and make sure it it will come together seamlessly</li>
+</ul>
+<p><img src="pics/LadleStir.jpg" width="50%"></p>
+<p>No need to ladle and stir at the same time.</p>
+</div>
+<div id="why-use-a-design-document-5-of-5" class="section level2">
+<h2 class="hasAnchor">
+<a href="#why-use-a-design-document-5-of-5" class="anchor"></a>Why use a design document? (5 of 5)</h2>
+<ul>
+<li>Helps future you/developers understand what you had done so that you can create improvements or additions</li>
+<li>Helps you remember everything you’ll inevitably forget</li>
+</ul>
+<p><img src="pics/BurningSmellsLike.jpg" width="50%"></p>
 </div>
 <div id="what-to-include-in-your-design-document" class="section level2">
 <h2 class="hasAnchor">
 <a href="#what-to-include-in-your-design-document" class="anchor"></a>What to include in your design document</h2>
 <ul>
-<li>goal of each function</li>
-<li>inputs and outputs of each</li>
-<li>flow chart between functions</li>
-<li>calculations/equations</li>
-<li>any tricky points</li>
-<li>numerical stability considerations</li>
-<li>how you will approach each function, including pseudo code if it’s nontrivial</li>
-<li>tests you will implement (again goals, details)</li>
+<li>Goal of each function</li>
+<li>Inputs and outputs of each</li>
+<li>Flow chart between functions</li>
+<li>Calculations/equations</li>
+<li>Any tricky points</li>
+<li>Numerical stability considerations</li>
+<li>How you will approach each function (and some pseudo code)</li>
+<li>Tests you will implement (again goals, details)</li>
 <li>Helpful sketches</li>
 <li>Major updates</li>
 <li>Things you want to add/change in the future</li>
+</ul>
+</div>
+<div id="examples-of-design-docs" class="section level2">
+<h2 class="hasAnchor">
+<a href="#examples-of-design-docs" class="anchor"></a>Examples of Design Docs</h2>
+<ul>
+<li><a href="https://github.com/knudson1/glmm/blob/master/DesignDocs/DesignDocGLMM.pdf">glmm</a></li>
+<li><a href="https://github.com/knudson1/stableGR/blob/master/DesignDoc/Revisiting_GR.pdf">stableGR</a></li>
 </ul>
 </div>
 <div id="building-an-r-package" class="section level2">
