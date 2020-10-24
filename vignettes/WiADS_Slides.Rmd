@@ -45,15 +45,16 @@ knitr::include_graphics("pics/ldck.jpg")
 ```{r setup, message=FALSE, eval=FALSE}
 library(MyFirstPackage)
 
-# Best practices for R package design
+# Design your R package
 design_package()
 
-# Building an R package
+# Build your R package
 build_package()
 
-# Distribution of your R package
+# Distribute of your R package
 distribute_package()
 
+#Profit!
 ```
 
 ## Best practices for R package design
@@ -69,8 +70,7 @@ knitr::include_graphics("pics/pam.jpeg")
 
 
 ## Why use a design document? (1 of 5)
- - [Watch this video first!](https://www.youtube.com/watch?v=NywzrUJnmTo
- )
+ - [Watch this video first!](https://www.youtube.com/watch?v=NywzrUJnmTo)
  
 ## Why use a design document? (2 of 5)
 
@@ -88,7 +88,7 @@ knitr::include_graphics("pics/twoseparate.jpg")
  - Forces you to explain everything in detail 
  - Helps you predict problems and tricky points 
 
-```{r , echo=FALSE, out.width = '80%'}
+```{r , echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/FoldItIn.jpg")
 ```
  
@@ -108,7 +108,7 @@ knitr::include_graphics("pics/LadleStir.jpg")
  - Helps future you/developers understand what you had done so that you can create improvements or additions
  - Helps you remember everything you'll inevitably forget
  
-```{r , echo=FALSE, out.width = '50%'}
+```{r , echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/BurningSmellsLike.jpg")
 ```
 
@@ -249,7 +249,7 @@ Production version control - put R in prod reference to talk
 
 ## Where to Find Us
 
-Find this presentation at: https://github.com/knudson1/WiADS2020/blob/master/doc/Presentation_Slides.pdf
+Find this presentation at: https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf
 
 *Lindsey Dietz*
 

@@ -11,15 +11,16 @@ knitr::include_graphics("pics/ldck.jpg")
 ## ----setup, message=FALSE, eval=FALSE-----------------------------------------
 #  library(MyFirstPackage)
 #  
-#  # Best practices for R package design
+#  # Design your R package
 #  design_package()
 #  
-#  # Building an R package
+#  # Build your R package
 #  build_package()
 #  
-#  # Distribution of your R package
+#  # Distribute of your R package
 #  distribute_package()
 #  
+#  #Profit!
 
 ## ----pam, echo=FALSE, out.width = '100%'--------------------------------------
 knitr::include_graphics("pics/pam.jpeg")
@@ -27,13 +28,13 @@ knitr::include_graphics("pics/pam.jpeg")
 ## ---- echo=FALSE, out.width = '100%'------------------------------------------
 knitr::include_graphics("pics/twoseparate.jpg")
 
-## ---- echo=FALSE, out.width = '80%'-------------------------------------------
+## ---- echo=FALSE, out.width = '100%'------------------------------------------
 knitr::include_graphics("pics/FoldItIn.jpg")
 
 ## ---- echo=FALSE, out.width = '50%'-------------------------------------------
 knitr::include_graphics("pics/LadleStir.jpg")
 
-## ---- echo=FALSE, out.width = '50%'-------------------------------------------
+## ---- echo=FALSE, out.width = '100%'------------------------------------------
 knitr::include_graphics("pics/BurningSmellsLike.jpg")
 
 ## ----lego1, echo=FALSE, out.width = '100%'------------------------------------
