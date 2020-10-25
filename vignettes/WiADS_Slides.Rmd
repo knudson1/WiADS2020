@@ -5,9 +5,9 @@ author:
    - Lindsey Dietz, PhD$^1$
    - Christina Knudson, PhD$^2$
 institute: 
-   - $^1$Financial Economist, Federal Reserve Bank of Minneapolis \newline lindseydietz13@gmail.com; @lindseydietz13
-   - $^2$Asst. Professor of Statistics, University of Saint Thomas \newline knud8583@stthomas.edu; @canoodleson
-date: 2020-10-30 \newline \newline https://github.com/knudson1/WiADS2020
+   - $^1$Financial Economist, Federal Reserve Bank of Minneapolis \newline  \href{mailto:lindseydietz13@gmail.com}{lindseydietz13@gmail.com}; \href{https://www.linkedin.com/in/lindseydietz/}{LinkedIn}; \href{https://twitter.com/lindseydietz13}{@lindseydietz13}
+   - $^2$Asst. Professor of Statistics, University of Saint Thomas \newline \href{mailto:knud8583@stthomas.edu}{knud8583@stthomas.edu}; \href{https://www.linkedin.com/in/christinaknudson/}{LinkedIn}; \href{https://twitter.com/canoodleson}{@canoodleson}
+date: 2020-10-30 \newline \newline Get these slides - https://github.com/knudson1/WiADS2020
 output: 
   beamer_presentation:
     theme: "default"
