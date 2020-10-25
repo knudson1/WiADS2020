@@ -82,6 +82,14 @@ knitr::include_graphics("pics/dr.jpeg")
 ## ----organized, echo=FALSE, out.width = '100%'--------------------------------
 knitr::include_graphics("pics/ann.jpg")
 
+## ----git, echo=FALSE, out.width = '49%'---------------------------------------
+knitr::include_graphics("pics/github.jpg")
+knitr::include_graphics("pics/createrepo.jpg")
+
+
+## ----gitpush, echo=FALSE, out.width = '70%', fig.align='center'---------------
+knitr::include_graphics("pics/gitpush.jpg")
+
 ## ----incepted, echo=FALSE, out.width = '100%'---------------------------------
 knitr::include_graphics("pics/inception.jpg")
 

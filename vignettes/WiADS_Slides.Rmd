@@ -77,7 +77,8 @@ knitr::include_graphics("pics/pam.jpeg")
  - Doc written with the understanding that future-you will forget these details otherwise
 
 ## Why use a design document? (1 of 5)
- - [Watch this video first!](https://www.youtube.com/watch?v=NywzrUJnmTo)
+
+[![](pics/david.jpg)](https://www.youtube.com/watch?v=NywzrUJnmTo "Watch")
  
 ## Why use a design document? (2 of 5)
 
@@ -133,8 +134,8 @@ knitr::include_graphics("pics/BurningSmellsLike.jpg")
  
 ## Examples of Design Docs
 
-- [glmm](https://github.com/knudson1/glmm/blob/master/DesignDocs/DesignDocGLMM.pdf) 
-- [stableGR](https://github.com/knudson1/stableGR/blob/master/DesignDoc/Revisiting_GR.pdf)
+- [**`glmm`**](https://github.com/knudson1/glmm/blob/master/DesignDocs/DesignDocGLMM.pdf) 
+- [**`stableGR`**](https://github.com/knudson1/stableGR/blob/master/DesignDoc/Revisiting_GR.pdf)
 
 
 ## Building An R Package 
@@ -148,7 +149,7 @@ knitr::include_graphics("pics/BurningSmellsLike.jpg")
 knitr::include_graphics("pics/lego.jpeg")
 ```
 
-## Create the Package
+## [Create the Package](https://youtu.be/QFOMm4q-3ww)
 
  - Building R packages used to take expert knowledge. Not anymore!
  - Several R packages and RStudio built-ins exist to help you
@@ -164,7 +165,7 @@ usethis::create_package("~/MyFirstPackage")
 
 ```
 
-## Add files for your functions
+## [Add files for your functions](https://youtu.be/QFOMm4q-3ww)
 
  - Option #1 - Create .R files with your function and move them into the package's R folder
  - Option #2 - `usethis` package
@@ -176,9 +177,9 @@ usethis::use_r('minESS')
 
 ```
 
-If R functions are new to you, check out this resource: https://r4ds.had.co.nz/functions.html
+If R functions are new to you, check out [**this resource**](https://r4ds.had.co.nz/functions.html)
 
-## Create (or copy/paste) functions
+## [Create (or copy/paste) functions](https://youtu.be/QFOMm4q-3ww)
 
 ```{r miness, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/partialfunc.jpeg")
@@ -198,7 +199,7 @@ knitr::include_graphics("pics/fullfunc.jpeg")
 knitr::include_graphics("pics/doc.jpg")
 ```
 
-## Check, build, and install your package
+## [Check, build, and install your package](https://youtu.be/-ii7exabad8)
 
 Option #1 Use the tools in RStudio
 ```{r build, echo=FALSE, out.width = '80%'}
@@ -215,7 +216,7 @@ devtools::install()
 ## Customize
 
 - Add tests, package dependencies, vignettes!
-- A comprehensive R package building resource: https://r-pkgs.org/index.html
+- Check out this [**comprehensive R package building resource**](https://r-pkgs.org/index.html)
 
 ```{r bedazzle, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/bedazzler.jpg")
@@ -233,7 +234,7 @@ knitr::include_graphics("pics/janets.png")
 knitr::include_graphics("pics/dr.jpeg")
 ```
 
-From David Robinson's excellent talk at rstudio::conf(2019) (https://rstudio.com/resources/rstudioconf-2019/the-unreasonable-effectiveness-of-public-work/)
+From David Robinson's [**excellent talk at rstudio::conf(2019)**](https://rstudio.com/resources/rstudioconf-2019/the-unreasonable-effectiveness-of-public-work/)
 
 ## Why Distribute Your R Package?
 
@@ -242,7 +243,7 @@ From David Robinson's excellent talk at rstudio::conf(2019) (https://rstudio.com
 - Saving "future you" time with third parties such as audit
 - You control the narrative of your code
 
-## Distibution in Git
+## [Distibution in Git](https://youtu.be/BwrjfJeO8XM)
 
  - Git has become a dominant version control technique 
  - Git makes it easy to (1) track changes over time (2) plan future changes (3) work with teams
@@ -252,24 +253,43 @@ From David Robinson's excellent talk at rstudio::conf(2019) (https://rstudio.com
 knitr::include_graphics("pics/ann.jpg")
 ```
 
+## (Some) Startup in Github
+
+ - An amazing and free resource for R users is [**Jenny Brian's book**](https://happygitwithr.com/)
+ - Create an account
+ - [**Create an SSH key**](https://happygitwithr.com/ssh-keys.html)
+ - Create a new repository
+
+```{r git, echo=FALSE, out.width = '49%'}
+knitr::include_graphics("pics/github.jpg")
+knitr::include_graphics("pics/createrepo.jpg")
+
+```
+
+## Git going
+
+ - [Clone](https://youtu.be/BwrjfJeO8XM)
+ - [Commit & Push](https://youtu.be/hm3KqDwb78k)
+
+```{r gitpush, echo=FALSE, out.width = '70%', fig.align='center'}
+knitr::include_graphics("pics/gitpush.jpg")
+```
+
 ## Git Jargon
 
- - Git has A LOT of jargon. Don't let it overwhelm you and ask questions of those who use it as a second language. (https://git-scm.com/docs)
+ - [**Git has A LOT of jargon**](https://git-scm.com/docs). Don't let it stop you!
  - Some start-up words: 
-   + repository - a remote folder for your things on your Git site of choice (Github, GitLab, etc.)
+   + repository (repo) - a remote folder for your things on your Git site of choice (Github, GitLab, etc.)
    + clone - make a copy of your remote repository on your computer
    + pull - incorporate changes from a remote repository into your local clone
    + commit - record changes to your local clone
    + push - update remote repository with changes from your commits
- - An amazing and free resource for R users is Jenny Brian's book: https://happygitwithr.com/
-
 
 ## The Beginning
 
- - Thanks for being here and to the WiADS organizers for making a great conference happen
  - We hope we've planted the seeds for you to build R packages to showcase your work going forward
- 
+ - Thanks for being here and to the WiADS organizers for making a great conference happen
+
  ```{r incepted, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/inception.jpg")
 ```
-
