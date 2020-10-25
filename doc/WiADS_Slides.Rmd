@@ -7,7 +7,7 @@ author:
 institute: 
    - $^1$Financial Economist, Federal Reserve Bank of Minneapolis \newline lindseydietz13@gmail.com; @lindseydietz13
    - $^2$Asst. Professor of Statistics, University of Saint Thomas \newline knud8583@stthomas.edu; @canoodleson
-date: 2020-10-30 \newline \newline https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf
+date: 2020-10-30 \newline \newline https://github.com/knudson1/WiADS2020
 output: 
   beamer_presentation:
     theme: "default"
@@ -102,13 +102,10 @@ knitr::include_graphics("pics/FoldItIn.jpg")
 ## Why use a design document? (4 of 5)
 
  - Helps you divide the work into reasonable modules so you can split it between days or people and make sure it it will come together seamlessly
-
-```{r , echo=FALSE, out.width = '50%'}
+ - No need to ladle and stir at the same time...
+```{r , echo=FALSE, out.width = '50%', fig.align='center'}
 knitr::include_graphics("pics/LadleStir.jpg")
 ```
- 
- No need to ladle and stir at the same time.
-
  
 ## Why use a design document? (5 of 5)
  
@@ -137,6 +134,9 @@ knitr::include_graphics("pics/BurningSmellsLike.jpg")
 - [**`glmm`**](https://github.com/knudson1/glmm/blob/master/DesignDocs/DesignDocGLMM.pdf) 
 - [**`stableGR`**](https://github.com/knudson1/stableGR/blob/master/DesignDoc/Revisiting_GR.pdf)
 
+```{r glmm, echo=FALSE, out.width = '60%', fig.align='center'}
+knitr::include_graphics("pics/glmm.jpg")
+```
 
 ## Building An R Package 
 

@@ -31,11 +31,14 @@ knitr::include_graphics("pics/twoseparate.jpg")
 ## ---- echo=FALSE, out.width = '100%'------------------------------------------
 knitr::include_graphics("pics/FoldItIn.jpg")
 
-## ---- echo=FALSE, out.width = '50%'-------------------------------------------
+## ---- echo=FALSE, out.width = '50%', fig.align='center'-----------------------
 knitr::include_graphics("pics/LadleStir.jpg")
 
 ## ---- echo=FALSE, out.width = '100%'------------------------------------------
 knitr::include_graphics("pics/BurningSmellsLike.jpg")
+
+## ----glmm, echo=FALSE, out.width = '60%', fig.align='center'------------------
+knitr::include_graphics("pics/glmm.jpg")
 
 ## ----lego1, echo=FALSE, out.width = '100%'------------------------------------
 knitr::include_graphics("pics/lego.jpeg")
