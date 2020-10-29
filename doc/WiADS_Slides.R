@@ -25,20 +25,26 @@ knitr::include_graphics("pics/ldck.jpg")
 ## ----pam, echo=FALSE, out.width = '100%'--------------------------------------
 knitr::include_graphics("pics/pam.jpeg")
 
-## ---- echo=FALSE, out.width = '100%'------------------------------------------
+## ---- echo=FALSE, out.width = '90%', fig.align='center'-----------------------
+knitr::include_graphics("pics/Map.jpg")
+
+## ---- echo=FALSE, out.width = '100%', fig.align='center'----------------------
 knitr::include_graphics("pics/twoseparate.jpg")
 
-## ---- echo=FALSE, out.width = '100%'------------------------------------------
+## ---- echo=FALSE, out.width = '100%', fig.align='center'----------------------
 knitr::include_graphics("pics/FoldItIn.jpg")
 
 ## ---- echo=FALSE, out.width = '50%', fig.align='center'-----------------------
 knitr::include_graphics("pics/LadleStir.jpg")
 
+## ---- echo=FALSE, out.width = '100%', fig.align='center'----------------------
+knitr::include_graphics("pics/MothersRecipe.jpg")
+
 ## ---- echo=FALSE, out.width = '100%'------------------------------------------
 knitr::include_graphics("pics/BurningSmellsLike.jpg")
 
 ## ----glmm, echo=FALSE, out.width = '60%', fig.align='center'------------------
-knitr::include_graphics("pics/glmm.jpg")
+knitr::include_graphics("pics/glmm.png")
 
 ## ----lego1, echo=FALSE, out.width = '100%'------------------------------------
 knitr::include_graphics("pics/lego.jpeg")
