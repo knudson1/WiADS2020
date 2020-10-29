@@ -107,7 +107,7 @@ knitr::include_graphics("pics/LadleStir.jpg")
  
 ## Helps you remember what you'll inevitably forget
  
-```{r , echo=FALSE, out.width = '100%', fig.align='center'}
+```{r , echo=FALSE, out.width = '60%', fig.align='center'}
 knitr::include_graphics("pics/MothersRecipe.jpg")
 ```
 
@@ -170,7 +170,7 @@ usethis::create_package("~/MyFirstPackage")
 ## [Add files for your functions](https://youtu.be/QFOMm4q-3ww)
 
  - Option #1 - Create .R files with your function and move them into the package's R folder
- - Option #2 - `usethis` package
+ - Option #2 - `usethis` package - [(VIDEO LINK)](https://youtu.be/QFOMm4q-3ww)
  
 ```{r setup4, eval=FALSE, message=FALSE}
 
@@ -181,9 +181,8 @@ usethis::use_r('minESS')
 
 If R functions are new to you, check out [**this resource**](https://r4ds.had.co.nz/functions.html)
 
-## [Create (or copy/paste) functions]
+## Create (or copy/paste) functions
 
-[(VIDEO LINK)](https://youtu.be/QFOMm4q-3ww)
 ```{r miness, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/partialfunc.jpeg")
 ```

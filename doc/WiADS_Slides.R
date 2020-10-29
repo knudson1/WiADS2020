@@ -37,7 +37,7 @@ knitr::include_graphics("pics/FoldItIn.jpg")
 ## ---- echo=FALSE, out.width = '50%', fig.align='center'-----------------------
 knitr::include_graphics("pics/LadleStir.jpg")
 
-## ---- echo=FALSE, out.width = '100%', fig.align='center'----------------------
+## ---- echo=FALSE, out.width = '60%', fig.align='center'-----------------------
 knitr::include_graphics("pics/MothersRecipe.jpg")
 
 ## ---- echo=FALSE, out.width = '100%'------------------------------------------
