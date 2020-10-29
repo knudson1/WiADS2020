@@ -181,8 +181,9 @@ usethis::use_r('minESS')
 
 If R functions are new to you, check out [**this resource**](https://r4ds.had.co.nz/functions.html)
 
-## [Create (or copy/paste) functions](https://youtu.be/QFOMm4q-3ww)
+## [Create (or copy/paste) functions]
 
+[(VIDEO LINK)](https://youtu.be/QFOMm4q-3ww)
 ```{r miness, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/partialfunc.jpeg")
 ```
@@ -201,9 +202,9 @@ knitr::include_graphics("pics/fullfunc.jpeg")
 knitr::include_graphics("pics/doc.jpg")
 ```
 
-## [Check, build, and install your package](https://youtu.be/-ii7exabad8)
+## Check, build, and install your package
 
-Option #1 Use the tools in RStudio
+Option #1 Use the tools in RStudio [(VIDEO LINK)](https://youtu.be/HyZ1fMor780)
 ```{r build, echo=FALSE, out.width = '80%'}
 knitr::include_graphics("pics/check.jpg")
 ```
@@ -270,8 +271,8 @@ knitr::include_graphics("pics/createrepo.jpg")
 
 ## Git going
 
- - [Clone](https://youtu.be/BwrjfJeO8XM)
- - [Commit & Push](https://youtu.be/hm3KqDwb78k)
+ - Clone - [(VIDEO LINK)](https://youtu.be/BwrjfJeO8XM)
+ - Commit & Push - [(VIDEO LINK)](https://youtu.be/hm3KqDwb78k)
 
 ```{r gitpush, echo=FALSE, out.width = '70%', fig.align='center'}
 knitr::include_graphics("pics/gitpush.jpg")
