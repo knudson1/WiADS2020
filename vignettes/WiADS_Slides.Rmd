@@ -1,6 +1,6 @@
 ---
 title: "Software Design, Development, and Distribution in R"
-subtitle: "MinneAnalytics Women in Analytics and Data Science"
+subtitle: "Boston University BSA Seminar"
 author: 
    - Lindsey Dietz, PhD$^1$
    - Christina Knudson, PhD$^2$
