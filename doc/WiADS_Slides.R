@@ -5,7 +5,8 @@ knitr::opts_chunk$set(
   comment = "#>"
 )
 
-## ----ldck, echo=FALSE, out.width = '50%', fig.align='center'------------------
+## ----ldck, echo=FALSE, out.width = '40%', fig.show='hold', fig.align='center'----
+knitr::include_graphics("pics/boston.jpg")
 knitr::include_graphics("pics/ldck.jpg")
 
 ## ----setup, message=FALSE, eval=FALSE-----------------------------------------

@@ -37,10 +37,11 @@ The views expressed in this presentation are strictly my own. They do not necess
  - Co-organizers of R Ladies-Twin Cities and the noRth conference
  - Both cyclists & coffee lovers
  
-```{r ldck, echo=FALSE, out.width = '50%', fig.align='center'}
+```{r ldck, echo=FALSE, out.width = '40%', fig.show='hold', fig.align='center'}
+knitr::include_graphics("pics/boston.jpg")
 knitr::include_graphics("pics/ldck.jpg")
 ```
-
+ 
 ## Objectives of this talk
 
 ```{r setup, message=FALSE, eval=FALSE}
