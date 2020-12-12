@@ -13,7 +13,7 @@ You can install the development version of MyFirstPackage from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("knudson1/WiADS2020", build_vignettes = TRUE)
+devtools::install_github("knudson1/WiADS2020", ref = "boston", build_vignettes = TRUE)
 ```
 
 ## Talk Slides
@@ -22,11 +22,11 @@ After installing, you can access the slides using the following code:
 
 ``` r
 library(MyFirstPackage)
-vignette("WiADS_Slides")
+vignette("BSA_Slides")
 ```
 
 You can also get there directly using the link:
-<https://github.com/knudson1/WiADS2020/blob/boston/doc/WiADS_Slides.pdf>
+<https://github.com/knudson1/WiADS2020/blob/boston/doc/BSA_Slides.pdf>
 
 ## Example
 
