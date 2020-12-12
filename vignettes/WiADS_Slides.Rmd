@@ -7,7 +7,7 @@ author:
 institute: 
    - $^1$Financial Economist, Federal Reserve Bank of Minneapolis \newline  \href{mailto:lindseydietz13@gmail.com}{lindseydietz13@gmail.com}; \href{https://www.linkedin.com/in/lindseydietz/}{LinkedIn}; \href{https://twitter.com/lindseydietz13}{@lindseydietz13}
    - $^2$Asst. Professor of Statistics, University of Saint Thomas \newline \href{mailto:knud8583@stthomas.edu}{knud8583@stthomas.edu}; \href{https://www.linkedin.com/in/christinaknudson/}{LinkedIn}; \href{https://twitter.com/canoodleson}{@canoodleson}
-date: 2020-10-30 \newline \newline Get these slides - https://github.com/knudson1/WiADS2020
+date: 2020-12-18 
 output: 
   beamer_presentation:
     theme: "default"
@@ -77,7 +77,6 @@ knitr::include_graphics("pics/pam.jpeg")
 ```{r , echo=FALSE, out.width = '90%', fig.align='center'}
 knitr::include_graphics("pics/Map.jpg")
 ```
-
 
 ## Why use a design document? 
 
@@ -291,7 +290,7 @@ knitr::include_graphics("pics/gitpush.jpg")
 ## The Beginning
 
  - We hope we've planted the seeds for you to build R packages to showcase your work going forward
- - Thanks for being here and to the WiADS organizers for making a great conference happen
+ - Thanks for being here and for inviting us to join you today
 
  ```{r incepted, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/inception.jpg")
