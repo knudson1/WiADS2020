@@ -4,8 +4,7 @@
 # MyFirstPackage
 
 The goal of MyFirstPackage is to accompany the talk by Dietz & Knudson
-at the Minneanalytics Women in Analytics and Data Science conference
-held on October 30, 2020.
+at the Boston University BSA seminar held on December 18, 2020.
 
 ## Installation
 
@@ -27,7 +26,7 @@ vignette("WiADS_Slides")
 ```
 
 You can also get there directly using the link:
-<https://github.com/knudson1/WiADS2020/blob/master/doc/WiADS_Slides.pdf>
+<https://github.com/knudson1/WiADS2020/blob/boston/doc/WiADS_Slides.pdf>
 
 ## Example
 
