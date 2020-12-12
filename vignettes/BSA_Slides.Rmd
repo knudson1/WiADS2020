@@ -1,0 +1,297 @@
+---
+title: "Software Design, Development, and Distribution in R"
+subtitle: "Boston University BSA Seminar"
+author: 
+   - Lindsey Dietz, PhD$^1$
+   - Christina Knudson, PhD$^2$
+institute: 
+   - $^1$Financial Economist, Federal Reserve Bank of Minneapolis \newline  \href{mailto:lindseydietz13@gmail.com}{lindseydietz13@gmail.com}; \href{https://www.linkedin.com/in/lindseydietz/}{LinkedIn}; \href{https://twitter.com/lindseydietz13}{@lindseydietz13}
+   - $^2$Asst. Professor of Statistics, University of Saint Thomas \newline \href{mailto:knud8583@stthomas.edu}{knud8583@stthomas.edu}; \href{https://www.linkedin.com/in/christinaknudson/}{LinkedIn}; \href{https://twitter.com/canoodleson}{@canoodleson}
+date: 2020-12-18 
+output: 
+  beamer_presentation:
+    theme: "default"
+    colortheme: "whale"
+    fonttheme: "structurebold"
+    highlight: haddock
+vignette: >
+  %\VignetteIndexEntry{BSA_Slides}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  echo = TRUE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Dr. Dietz's Disclaimer
+The views expressed in this presentation are strictly my own. They do not necessarily represent the position of the Federal Reserve Bank of Minneapolis or the Federal Reserve System.
+
+## About Us
+
+ - Friends since meeting in our Statistics PhD program in 2011
+ - Co-organizers of R Ladies-Twin Cities and the noRth conference
+ - Both cyclists & coffee lovers
+ 
+```{r ldck, echo=FALSE, out.width = '40%', fig.show='hold', fig.align='center'}
+knitr::include_graphics("pics/boston.jpg")
+knitr::include_graphics("pics/ldck.jpg")
+```
+ 
+## Objectives of this talk
+
+```{r setup, message=FALSE, eval=FALSE}
+library(MyFirstPackage)
+
+# Design your R package
+design_package()
+
+# Build your R package
+build_package()
+
+# Distribute your R package
+distribute_package()
+
+#Profit!
+```
+
+## Our Assumptions
+
+ - You have some experience programming in R
+ - You have some experience on Git (i.e. we won't show you how to set it up) 
+ - You have some custom R functions on your computer that get used repeatedly
+ - You have an audience (including yourself) for your code
+
+## Best practices for R package design
+
+```{r pam, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/pam.jpeg")
+```
+
+## What is a design document?
+
+```{r , echo=FALSE, out.width = '90%', fig.align='center'}
+knitr::include_graphics("pics/Map.jpg")
+```
+
+## Why use a design document? 
+
+[![](pics/david.jpg)](https://www.youtube.com/watch?v=NywzrUJnmTo "Watch")
+ 
+## Separates thinking and coding
+ 
+```{r , echo=FALSE, out.width = '100%', fig.align='center'}
+knitr::include_graphics("pics/twoseparate.jpg")
+```
+
+ Imagine creating enchiladas without a recipe!
+
+##  Forces you to explain everything in detail 
+
+```{r , echo=FALSE, out.width = '100%', fig.align='center'}
+knitr::include_graphics("pics/FoldItIn.jpg")
+```
+ 
+## Helps you divide the project into smaller tasks
+ 
+
+```{r , echo=FALSE, out.width = '50%', fig.align='center'}
+knitr::include_graphics("pics/LadleStir.jpg")
+```
+ 
+ No need to ladle and stir at the same time!
+ 
+## Helps you remember what you'll inevitably forget
+ 
+```{r , echo=FALSE, out.width = '60%', fig.align='center'}
+knitr::include_graphics("pics/MothersRecipe.jpg")
+```
+
+
+## Helps you predict problems and tricky points 
+ 
+```{r , echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/BurningSmellsLike.jpg")
+```
+
+## What to include in your design document
+ - Goal of each function
+ - Inputs and outputs of each
+ - Flow chart between functions
+ - Calculations/equations
+ - Any tricky points
+ - Numerical stability considerations 
+ - How you will approach each function (and some pseudo code)
+ - Tests you will implement (again goals, details)
+ - Helpful sketches
+ - Major updates
+ - Things you want to add/change in the future
+ 
+## Examples of Design Docs
+
+- [**`glmm`**](https://github.com/knudson1/glmm/blob/master/DesignDocs/DesignDocGLMM.pdf) 
+- [**`stableGR`**](https://github.com/knudson1/stableGR/blob/master/DesignDoc/Revisiting_GR.pdf)
+
+```{r glmm, echo=FALSE, out.width = '60%', fig.align='center'}
+knitr::include_graphics("pics/glmm.png")
+```
+
+## Building An R Package 
+
+ - You have the building blocks 
+   + Repeatable processes 
+   + Custom functions
+   + Design document 
+
+```{r lego1, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/lego.jpeg")
+```
+
+## [Create the Package](https://youtu.be/QFOMm4q-3ww)
+
+ - Building R packages used to take expert knowledge. Not anymore!
+ - Several R packages and RStudio built-ins exist to help you
+
+ - Option #1 - Use the RStudio interface: File -> New Project -> New Directory -> R Package
+
+ - Option #2 - Use the aptly named `usethis` package
+```{r setup3, eval=FALSE, message=FALSE}
+#install.packages('usethis')
+library(usethis)
+
+usethis::create_package("~/MyFirstPackage") 
+
+```
+
+## [Add files for your functions](https://youtu.be/QFOMm4q-3ww)
+
+ - Option #1 - Create .R files with your function and move them into the package's R folder
+ - Option #2 - `usethis` package - [(VIDEO LINK)](https://youtu.be/QFOMm4q-3ww)
+ 
+```{r setup4, eval=FALSE, message=FALSE}
+
+usethis::use_r('target_psrf')
+usethis::use_r('minESS')
+
+```
+
+If R functions are new to you, check out [**this resource**](https://r4ds.had.co.nz/functions.html)
+
+## Create (or copy/paste) functions
+
+```{r miness, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/partialfunc.jpeg")
+```
+
+## Add help documentation for functions 
+
+ - In an R package, help documentation is mandatory; good documentation is optional (but not really!)
+ - While you can create documents manually (in the man folder), the `roxygen2` package makes it easy to create the documentation with your code
+```{r miness2, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/fullfunc.jpeg")
+```
+
+## Help documentation generated by `roxygen2`
+
+```{r doc, echo=FALSE, out.width = '75%'}
+knitr::include_graphics("pics/doc.jpg")
+```
+
+## Check, build, and install your package
+
+Option #1 Use the tools in RStudio [(VIDEO LINK)](https://youtu.be/HyZ1fMor780)
+```{r build, echo=FALSE, out.width = '80%'}
+knitr::include_graphics("pics/check.jpg")
+```
+
+Option #2 Use the `devtools` package (can be useful when things get more complicated)
+```{r check, eval = FALSE, echo=TRUE}
+devtools::check()
+devtools::build()
+devtools::install()
+```
+
+## Customize
+
+- Add tests, package dependencies, vignettes!
+- Check out this [**comprehensive R package building resource**](https://r-pkgs.org/index.html)
+
+```{r bedazzle, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/bedazzler.jpg")
+```
+
+## Distribution of Your R Package
+
+```{r janet, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/janets.png")
+```
+
+## Why Distribute Your R Package?
+
+```{r dr, echo=FALSE, out.width = '90%'}
+knitr::include_graphics("pics/dr.jpeg")
+```
+
+From David Robinson's [**excellent talk at rstudio::conf(2019)**](https://rstudio.com/resources/rstudioconf-2019/the-unreasonable-effectiveness-of-public-work/)
+
+## Why Distribute Your R Package?
+
+- Gains in usership/citations for those in the public domain (academics, nonprofits)
+- Gains in productivity for those in private industries
+- Saving "future you" time with third parties such as audit
+- You control the narrative of your code
+
+## [Distibution in Git](https://youtu.be/BwrjfJeO8XM)
+
+ - Git has become a dominant version control technique 
+ - Git makes it easy to (1) track changes over time (2) plan future changes (3) work with teams
+ - Git is well integrated into RStudio
+ 
+```{r organized, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/ann.jpg")
+```
+
+## (Some) Startup in Github
+
+ - An amazing and free resource for R users is [**Jenny Brian's book**](https://happygitwithr.com/)
+ - Create an account
+ - [**Create an SSH key**](https://happygitwithr.com/ssh-keys.html)
+ - Create a new repository
+
+```{r git, echo=FALSE, out.width = '49%'}
+knitr::include_graphics("pics/github.jpg")
+knitr::include_graphics("pics/createrepo.jpg")
+
+```
+
+## Git going
+
+ - Clone - [(VIDEO LINK)](https://youtu.be/BwrjfJeO8XM)
+ - Commit & Push - [(VIDEO LINK)](https://youtu.be/hm3KqDwb78k)
+
+```{r gitpush, echo=FALSE, out.width = '70%', fig.align='center'}
+knitr::include_graphics("pics/gitpush.jpg")
+```
+
+## Git Jargon
+
+ - [**Git has A LOT of jargon**](https://git-scm.com/docs). Don't let it stop you!
+ - Some start-up words: 
+   + repository (repo) - a remote folder for your things on your Git site of choice (Github, GitLab, etc.)
+   + clone - make a copy of your remote repository on your computer
+   + pull - incorporate changes from a remote repository into your local clone
+   + commit - record changes to your local clone
+   + push - update remote repository with changes from your commits
+
+## The Beginning
+
+ - We hope we've planted the seeds for you to build R packages to showcase your work going forward
+ - Thanks for being here and for inviting us to join you today
+
+ ```{r incepted, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/inception.jpg")
+```
