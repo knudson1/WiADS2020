@@ -2,11 +2,11 @@
 title: "Software Design, Development, and Distribution in R"
 subtitle: "Boston University BSA Seminar"
 author: 
-   - Lindsey Dietz, PhD$^1$
-   - Christina Knudson, PhD$^2$
+   - Christina Knudson, PhD$^1$
+   - Lindsey Dietz, PhD$^2$
 institute: 
-   - $^1$Financial Economist, Federal Reserve Bank of Minneapolis \newline  \href{mailto:lindseydietz13@gmail.com}{lindseydietz13@gmail.com}; \href{https://www.linkedin.com/in/lindseydietz/}{LinkedIn}; \href{https://twitter.com/lindseydietz13}{@lindseydietz13}
-   - $^2$Asst. Professor of Statistics, University of Saint Thomas \newline \href{mailto:knud8583@stthomas.edu}{knud8583@stthomas.edu}; \href{https://www.linkedin.com/in/christinaknudson/}{LinkedIn}; \href{https://twitter.com/canoodleson}{@canoodleson}
+   - $^1$Asst. Professor of Statistics, University of Saint Thomas \newline \href{mailto:knud8583@stthomas.edu}{knud8583@stthomas.edu}; \href{https://www.linkedin.com/in/christinaknudson/}{LinkedIn}; \href{https://twitter.com/canoodleson}{@canoodleson}
+   - $^2$Financial Economist, Federal Reserve Bank of Minneapolis \newline  \href{mailto:lindseydietz13@gmail.com}{lindseydietz13@gmail.com}; \href{https://www.linkedin.com/in/lindseydietz/}{LinkedIn}; \href{https://twitter.com/lindseydietz13}{@lindseydietz13}
 date: 2020-12-18 
 output: 
   beamer_presentation:
