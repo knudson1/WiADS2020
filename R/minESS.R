@@ -27,7 +27,7 @@ minESS <- function(p, alpha = 0.05, epsilon = 0.05) {
     (log(2) - log(p) - lgamma(p / 2)) + log(pi) - 2 * log(epsilon) + log(crit)
 
   # Create final sample size by exponentiating and rounding to the nearest integer
-  finalESS <- round(exp(logminESS))
+  finalESS <- as.integer(round(exp(logminESS)))
 
   return(finalESS)
 }

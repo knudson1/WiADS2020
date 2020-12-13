@@ -16,3 +16,19 @@ test_that("Target PSRF works", {
   # Compare the output
   expect_equal(out1a, out1b)
 })
+
+test_that("PSRF is numeric", {
+
+  # Provide arguments
+  p <- 1
+  alpha <- 0.05
+  m <- 5
+  epsilon <- 0.05
+
+  # Calculate using function
+  out1a <- MyFirstPackage::target_psrf(p = p, epsilon = epsilon, m = m, alpha = alpha)
+
+  # Compare the output
+  expect_type(out1a$psrf, 'double')
+})
+

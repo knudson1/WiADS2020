@@ -156,9 +156,9 @@ knitr::include_graphics("pics/lego.jpeg")
  - Building R packages used to take expert knowledge. Not anymore!
  - Several R packages and RStudio built-ins exist to help you
 
- - Option #1 - Use the RStudio interface: File -> New Project -> New Directory -> R Package
+    + Option #1 - Use the RStudio interface: File -> New Project -> New Directory -> R Package
 
- - Option #2 - Use the aptly named `usethis` package
+    + Option #2 - Use the aptly named `usethis` package
 ```{r setup3, eval=FALSE, message=FALSE}
 #install.packages('usethis')
 library(usethis)
@@ -167,10 +167,10 @@ usethis::create_package("~/MyFirstPackage")
 
 ```
 
-## [Add files for your functions](https://youtu.be/QFOMm4q-3ww)
+## (Required) [Add your functions](https://youtu.be/QFOMm4q-3ww)
 
  - Option #1 - Create .R files with your function and move them into the package's R folder
- - Option #2 - `usethis` package - [(VIDEO LINK)](https://youtu.be/QFOMm4q-3ww)
+ - Option #2 - `usethis` package - [(**VIDEO LINK**)](https://youtu.be/QFOMm4q-3ww)
  
 ```{r setup4, eval=FALSE, message=FALSE}
 
@@ -187,7 +187,7 @@ If R functions are new to you, check out [**this resource**](https://r4ds.had.co
 knitr::include_graphics("pics/partialfunc.jpeg")
 ```
 
-## Add help documentation for functions 
+## (Required) Add help documentation for functions 
 
  - In an R package, help documentation is mandatory; good documentation is optional (but not really!)
  - While you can create documents manually (in the man folder), the `roxygen2` package makes it easy to create the documentation with your code
@@ -201,9 +201,46 @@ knitr::include_graphics("pics/fullfunc.jpeg")
 knitr::include_graphics("pics/doc.jpg")
 ```
 
+## (Best Practice) Add unit testing for your functions 
+
+ - Why test? ([**from Hadley Wickham**](https://journal.r-project.org/archive/2011-1/RJournal_2011-1_Wickham.pdf))
+   + Decreased frustration
+   + Better code structure
+   + Less struggle to pick up development after a break
+   + Increased confidence when making changes
+
+ - The `testthat` package makes it easy to integrate testing into your package especially if you are using the `usethis` package
+```{r setup5, eval=FALSE, message=FALSE}
+#install.packages(c('usethis','testthat'))
+library(usethis)
+library(testthat)
+
+usethis::use_testthat() 
+usethis::use_test('test-minESS.R')
+
+```
+
+## Example of a test 
+
+```{r essint, echo=FALSE, out.width = '100%'}
+knitr::include_graphics("pics/essinteger.jpg")
+```
+
+## Running your tests 
+
+Option #1 Use the tools in RStudio [(**VIDEO LINK**)](https://youtu.be/jld5I1vMJn4)
+```{r test1, echo=FALSE, out.width = '35%'}
+knitr::include_graphics("pics/test.jpg")
+```
+
+Option #2 Use the `devtools` package (does the same thing)
+```{r test2, eval = FALSE, echo=TRUE}
+devtools::test()
+```
+
 ## Check, build, and install your package
 
-Option #1 Use the tools in RStudio [(VIDEO LINK)](https://youtu.be/HyZ1fMor780)
+Option #1 Use the tools in RStudio [(**VIDEO LINK**)](https://youtu.be/HyZ1fMor780)
 ```{r build, echo=FALSE, out.width = '80%'}
 knitr::include_graphics("pics/check.jpg")
 ```
@@ -217,7 +254,7 @@ devtools::install()
 
 ## Customize
 
-- Add tests, package dependencies, vignettes!
+- Add package dependencies, vignettes, etc.!
 - Check out this [**comprehensive R package building resource**](https://r-pkgs.org/index.html)
 
 ```{r bedazzle, echo=FALSE, out.width = '100%'}
@@ -270,8 +307,8 @@ knitr::include_graphics("pics/createrepo.jpg")
 
 ## Git going
 
- - Clone - [(VIDEO LINK)](https://youtu.be/BwrjfJeO8XM)
- - Commit & Push - [(VIDEO LINK)](https://youtu.be/hm3KqDwb78k)
+ - Clone - [(**VIDEO LINK**)](https://youtu.be/BwrjfJeO8XM)
+ - Commit & Push - [(**VIDEO LINK**)](https://youtu.be/hm3KqDwb78k)
 
 ```{r gitpush, echo=FALSE, out.width = '70%', fig.align='center'}
 knitr::include_graphics("pics/gitpush.jpg")

@@ -72,6 +72,24 @@ knitr::include_graphics("pics/fullfunc.jpeg")
 ## ----doc, echo=FALSE, out.width = '75%'---------------------------------------
 knitr::include_graphics("pics/doc.jpg")
 
+## ----setup5, eval=FALSE, message=FALSE----------------------------------------
+#  #install.packages(c('usethis','testthat'))
+#  library(usethis)
+#  library(testthat)
+#  
+#  usethis::use_testthat()
+#  usethis::use_test('test-minESS.R')
+#  
+
+## ----essint, echo=FALSE, out.width = '100%'-----------------------------------
+knitr::include_graphics("pics/essinteger.jpg")
+
+## ----test1, echo=FALSE, out.width = '35%'-------------------------------------
+knitr::include_graphics("pics/test.jpg")
+
+## ----test2, eval = FALSE, echo=TRUE-------------------------------------------
+#  devtools::test()
+
 ## ----build, echo=FALSE, out.width = '80%'-------------------------------------
 knitr::include_graphics("pics/check.jpg")
 
