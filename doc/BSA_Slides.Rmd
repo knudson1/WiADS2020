@@ -323,11 +323,35 @@ knitr::include_graphics("pics/gitpush.jpg")
    + pull - incorporate changes from a remote repository into your local clone
    + commit - record changes to your local clone
    + push - update remote repository with changes from your commits
+   
+## CRAN Considerations
+
+ - Respect the CRAN people's time!
+
+ - Refer frequently to [Writing R Extensions](https://cran.r-project.org/doc/manuals/R-exts.html) 
+
+ - Perform additional CRAN-specific checks: R CMD check tarball.gz --as-cran
+ 
+ - Check your package on multiple OS; try [Win-Builder](https://win-builder.r-project.org/)
+ 
+ - Make sure your package offers something new
+ 
+## CRAN Considerations
+
+ - Format tests to output only TRUE or FALSE (less messy than numerical output)
+ 
+ - Use .Rout.save files to ensure test output has not changed
+ 
+ - Write tests, vignettes, and examples that run quickly
+ 
+ - Give yourself time: even if your package is close, polishing it for CRAN takes time
+ 
+ - Be prepared to maintain your package when CRAN updates/changes
 
 ## The Beginning
 
- - We hope we've planted the seeds for you to build R packages to showcase your work going forward
- - Thanks for being here and for inviting us to join you today
+ - Thank you!
+ - Contact: knud8583@stthomas.edu, lindseydietz13@gmail.com
 
  ```{r incepted, echo=FALSE, out.width = '100%'}
 knitr::include_graphics("pics/inception.jpg")
